@@ -132,12 +132,7 @@ section.block{padding-block:clamp(64px, 9vw, 120px)}
 .hero h1{margin-block:4px 24px}
 .hero .lead{margin-bottom:36px}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.hero-mark{position:relative;aspect-ratio:1/1;background:var(--green);border-radius:2px;display:grid;place-items:center;overflow:hidden;box-shadow:var(--shadow)}
-.hero-mark::after{content:"";position:absolute;inset:auto 0 0 0;height:32%;background:repeating-linear-gradient(90deg, rgba(246,242,234,.07) 0 1px, transparent 1px 18px);pointer-events:none}
-.hero-mark svg{width:56%;height:auto;position:relative;z-index:1}
-.hero-caption{position:absolute;right:24px;bottom:22px;z-index:1;text-align:right;color:var(--on-green)}
-.hero-caption em{font-family:var(--serif);font-size:clamp(17px,1.6vw,21px)}
-.hero-caption span{display:block;margin-top:10px;padding-top:10px;border-top:1px solid #B08D57;font:500 9.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--on-green-muted)}
+.hero-mark{display:block;width:100%;height:auto;aspect-ratio:1/1;background:var(--green);border-radius:2px;box-shadow:var(--shadow)}
 .page-hero{padding-block:clamp(56px, 8vw, 104px) clamp(48px, 6vw, 80px);border-bottom:1px solid var(--line)}
 .page-hero .h-1{max-width:18ch;margin-block:4px 22px}
 .leader{display:block;margin-top:28px;font-size:14px;color:var(--muted)}
@@ -420,10 +415,8 @@ main:focus{outline:none}
           <a class="btn btn-ghost" href="#/lo-que-hacemos">Conoce lo que hacemos</a>
         </div>
       </div>
-      <div class="hero-mark" role="img" aria-label="Monograma IR de IRALTUS">
-        <svg viewBox="22 22 56 56" aria-hidden="true"><rect x="22.8" y="22.8" width="54.4" height="54.4" fill="none" stroke="#F6F2EA" stroke-width="1.2"/><text x="50" y="62.5" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="500" font-size="29" fill="#F6F2EA">IR</text></svg>
-        <div class="hero-caption" aria-hidden="true"><em>Del lado de quien decide.</em><span>Estrategia · Dirección jurídica · Gobierno corporativo</span></div>
-      </div>
+      <img class="hero-mark" src="img/hero-ir.png" width="864" height="864" alt="Monograma IR de IRALTUS. Del lado de quien decide. Estrategia, dirección jurídica y gobierno corporativo.">
+
     </div>
   </section>
 
