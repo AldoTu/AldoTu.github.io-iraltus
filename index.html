@@ -287,6 +287,8 @@ fieldset{border:0;padding:0;margin:0}
 .choice span{font-size:15.5px}
 .form-status{padding:16px;border-radius:var(--radius);background:rgba(23,73,72,.08);color:var(--green);font-size:15px}
 .form-status:empty{display:none}
+.form-status[data-state="error"]{background:rgba(160,40,40,.08);color:#8a2323}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .btn[aria-busy="true"]{cursor:progress;opacity:.85}
 .spinner{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite;display:none}
 .btn[aria-busy="true"] .spinner{display:inline-block}
@@ -891,7 +893,8 @@ main:focus{outline:none}
 
   <section class="block" aria-label="Formulario de contacto">
     <div class="wrap contact-grid">
-      <form class="contact" id="contact-form" novalidate action="mailto:contacto@iraltus.com" method="post">
+      <form class="contact" id="contact-form" novalidate action="https://formsubmit.co/contacto@iraltus.com" method="post">
+        <div class="hp" aria-hidden="true"><label for="f-honey">No llenar</label><input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
         <div class="row-2">
           <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="María González…" required aria-describedby="e-nombre"><span class="err" id="e-nombre" aria-live="polite"></span></div>
           <div class="field"><label for="f-cargo">Cargo</label><input id="f-cargo" name="cargo" type="text" autocomplete="organization-title" placeholder="Directora general…" required aria-describedby="e-cargo"><span class="err" id="e-cargo" aria-live="polite"></span></div>
@@ -1073,14 +1076,26 @@ main:focus{outline:none}
     var bad=validate();
     if(bad){ bad.focus(); return; }
     btn.setAttribute('aria-busy','true'); btn.disabled=true; btn.lastElementChild.textContent='Enviando…';
-    // Integración: sustituir por POST a /api/contacto (p. ej. Vercel Function + Resend). Fallback: mailto.
+    status.textContent=''; delete status.dataset.state;
     var d=new FormData(form), temaTxt=form.querySelector('input[name="tema"]:checked').nextElementSibling.textContent;
-    var body='Nombre: '+d.get('nombre')+'\nCargo: '+d.get('cargo')+'\nEmpresa: '+d.get('empresa')+'\nCorreo: '+d.get('correo')+'\nTema: '+temaTxt+'\n\n'+(d.get('mensaje')||'');
-    setTimeout(function(){
-      window.location.href='mailto:contacto@iraltus.com?subject='+encodeURIComponent('Contacto web: '+temaTxt)+'&body='+encodeURIComponent(body);
-      btn.removeAttribute('aria-busy'); btn.disabled=false; btn.lastElementChild.textContent='Enviar mensaje';
-      status.textContent='Gracias. Abrimos tu correo con el mensaje listo; envíalo y un socio te responderá en un máximo de dos días hábiles.';
-    },400);
+    var payload={
+      Nombre:d.get('nombre'), Cargo:d.get('cargo'), Empresa:d.get('empresa'), Correo:d.get('correo'),
+      Tema:temaTxt, Mensaje:d.get('mensaje')||'',
+      _subject:'Contacto web: '+temaTxt+' — '+d.get('empresa'),
+      _replyto:d.get('correo'), _template:'table', _captcha:'false', _honey:d.get('_honey')||''
+    };
+    function done(){ btn.removeAttribute('aria-busy'); btn.disabled=false; btn.lastElementChild.textContent='Enviar mensaje'; }
+    fetch('https://formsubmit.co/ajax/contacto@iraltus.com',{
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify(payload)
+    }).then(function(r){ return r.json().then(function(j){ if(!r.ok || String(j.success)!=='true'){ console.warn('FormSubmit:',j.message); throw new Error(j.message); } }); })
+      .then(function(){
+        done(); form.reset();
+        status.textContent='Gracias. Recibimos tu mensaje; un socio te responderá en un máximo de dos días hábiles.';
+      })
+      .catch(function(){
+        done(); status.dataset.state='error';
+        status.innerHTML='No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a <a href="mailto:contacto@iraltus.com">contacto@iraltus.com</a>.';
+      });
   });
 
   document.getElementById('year').textContent=new Date().getFullYear();
