@@ -259,6 +259,31 @@ a.pub:hover{border-color:var(--line-strong);box-shadow:var(--shadow)}
 .pub.soon{opacity:.86}
 .pub.soon .more{color:var(--muted)}
 
+/* Article */
+.eyebrow.back{text-decoration:none;display:inline-flex;align-items:center;min-height:32px}
+.eyebrow.back:hover{color:var(--green)}
+.page-hero .article-title{max-width:24ch}
+.article-meta{display:flex;flex-wrap:wrap;gap:6px 22px;font-size:14px;color:var(--muted)}
+.article-meta > * + *::before{content:"";display:inline-block;vertical-align:middle;width:4px;height:4px;margin:-2px 9px 0 -13px;border-radius:50%;background:var(--bronze)}
+.prose{max-width:68ch;font-size:18px;line-height:1.7}
+.prose > * + *{margin-top:1.15em}
+.prose h2,.prose h3{font-size:clamp(24px, 2.6vw, 30px);margin-top:1.8em}
+.prose ul,.prose ol{padding-left:1.3em}
+.prose ul{list-style:disc}
+.prose ol{list-style:decimal}
+.prose li + li{margin-top:.5em}
+.prose li::marker{color:var(--bronze)}
+.prose strong{font-weight:600}
+.prose a{color:var(--green);text-underline-offset:3px;text-decoration-color:var(--line-strong)}
+.prose a:hover{text-decoration-color:var(--green)}
+.prose sup{font-size:.68em;font-weight:600;color:var(--bronze);margin-left:2px}
+.prose .footnotes{list-style:none;padding:20px 0 0;margin-top:48px;border-top:1px solid var(--line);display:grid;gap:8px;font-size:14px;line-height:1.5;color:var(--muted)}
+.footnotes li + li{margin-top:0}
+.footnotes .n{display:inline-block;min-width:22px;color:var(--bronze);font-weight:600;font-variant-numeric:tabular-nums}
+.article-nav{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;max-width:68ch;margin-top:clamp(48px, 6vw, 72px)}
+.article-nav .pub h3{font-size:21px}
+.article-nav .next{grid-column:2;text-align:right}
+
 /* Form */
 .contact-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(32px, 6vw, 80px);align-items:start}
 form.contact{display:grid;gap:20px}
@@ -346,6 +371,8 @@ main:focus{outline:none}
   .signals li{grid-template-columns:44px 1fr}
   .partner{grid-template-columns:1fr}
   .portrait{max-width:180px}
+  .article-nav{grid-template-columns:1fr}
+  .article-nav .next{grid-column:auto}
   .facts div{grid-template-columns:1fr;gap:2px}
   .cta-row .btn{width:100%}
 }
@@ -846,11 +873,42 @@ main:focus{outline:none}
     <div class="wrap">
       <span class="eyebrow">Publicaciones</span>
       <h1 class="h-1">Ideas para empresas que quieren gobernarse como grandes</h1>
-      <p class="lead">Artículos, webinars y eventos sobre gobierno corporativo, dirección jurídica y estrategia.</p>
+      <p class="lead">Columnas, webinars y eventos sobre estrategia, organización, sostenibilidad y gobierno corporativo.</p>
     </div>
   </section>
 
-  <section class="block" aria-labelledby="h-articulos">
+  <section class="block" aria-labelledby="h-blog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h-2" id="h-blog">Blog</h2>
+        <p class="lead">Columnas sobre estrategia, organización, sostenibilidad y energía, publicadas en colaboración con el periódico <i>La Razón</i>.</p>
+      </div>
+      <div class="pubs">
+        <a class="card pub" href="#/publicaciones/que-hay-detras-de-transformaciones-exitosas"><span class="meta"><time datetime="2023-06-12">12 de junio de 2023</time></span><h3>¿Qué hay detrás de transformaciones exitosas?</h3><p>Hemos sido testigos de profundas transformaciones empresariales en los últimos tiempos que han implicado saltos cuánticos en los modelos de negocio…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/la-inteligencia-artificial-y-la-creatividad-humana"><span class="meta"><time datetime="2023-05-31">31 de mayo de 2023</time></span><h3>La inteligencia artificial y la creatividad humana</h3><p>La inteligencia artificial (IA) ha transformado numerosos aspectos de nuestra vida, incluyendo la creatividad. A medida que la IA continúa avanzando…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/habilidades-suaves-y-la-tecnologia"><span class="meta"><time datetime="2023-05-01">1 de mayo de 2023</time></span><h3>Habilidades suaves y la tecnología</h3><p>Hemos sido testigos de innumerables y profundos cambios en los últimos años. El modelo de trabajo en oficina en el que hemos desarrollado nuestra…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/acceso-a-la-energia-y-perspectiva-de-genero"><span class="meta"><time datetime="2023-04-05">5 de abril de 2023</time></span><h3>Acceso a la energía y perspectiva de género</h3><p>El acceso a energéticos modernos transforma la vida de las personas al crear oportunidades. Sin embargo, cuando se diseñan políticas públicas…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/participacion-del-sector-privado-en-la-facilitacion-de-energia-moderna"><span class="meta"><time datetime="2023-03-08">8 de marzo de 2023</time></span><h3>Participación del sector privado en la facilitación de energía moderna</h3><p>A lo largo de los últimos tres años, México ha enfrentado grandes retos para recuperarse del impacto que generó la pandemia en la economía del país y…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/la-necesidad-de-protegernos-contra-los-ataques-ciberneticos"><span class="meta"><time datetime="2023-02-23">23 de febrero de 2023</time></span><h3>La necesidad de protegernos contra los ataques cibernéticos</h3><p>El riesgo de exponerse a ataques y amenazas cibernéticas es cada vez mayor; se estima que solo en los últimos dos años este tipo de delito aumentó…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/la-empatia-una-capacidad-fundamental-en-los-lideres"><span class="meta"><time datetime="2023-02-07">7 de febrero de 2023</time></span><h3>La empatía: una capacidad fundamental en los líderes</h3><p>Hoy en día, las organizaciones buscan líderes empáticos, con la capacidad de ofrecer un trato cercano y humano, una mentalidad abierta hacia los…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/la-industria-4-0-en-la-transformacion-de-la-cadena-de-valor"><span class="meta"><time datetime="2022-11-03">3 de noviembre de 2022</time></span><h3>La Industria 4.0 en la transformación de la cadena de valor</h3><p>Para que una empresa pueda triunfar en este complejo entorno actual, donde cada vez hay más competitividad y las necesidades del mercado cambian de…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/los-cimientos-de-la-colaboracion-en-los-equipos-de-trabajo"><span class="meta"><time datetime="2022-10-17">17 de octubre de 2022</time></span><h3>Los cimientos de la colaboración en los equipos de trabajo</h3><p>Las organizaciones que buscan crecer y mantener una posición competitiva en el mercado requieren de equipos sólidos y colaborativos. La colaboración…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/industria-del-litio-en-mexico"><span class="meta"><time datetime="2022-10-17">17 de octubre de 2022</time></span><h3>Industria del litio en México</h3><p>La necesidad de contar con nuevas formas de generación y almacenamiento de energía menos contaminantes y más accesibles ha posicionado al litio como…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/energia-fotovoltaica-una-alternativa-con-gran-potencial-en-mexico"><span class="meta"><time datetime="2022-10-03">3 de octubre de 2022</time></span><h3>Energía fotovoltaica, una alternativa con gran potencial en México</h3><p>La energía fotovoltaica es una fuente renovable que se obtiene al convertir los rayos ultravioletas del sol en electricidad. Esta tecnología se basa…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/construir-a-partir-del-conflicto"><span class="meta"><time datetime="2022-09-20">20 de septiembre de 2022</time></span><h3>Construir a partir del conflicto</h3><p>La gran mayoría de las personas tratamos de evitar los conflictos ya que le damos una connotación negativa. Olvidamos que los conflictos son…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/sostenibilidad-y-talento-en-las-empresas"><span class="meta"><time datetime="2022-09-01">1 de septiembre de 2022</time></span><h3>Sostenibilidad y talento en las empresas</h3><p>A pesar de que la sostenibilidad se ha vuelto un tema de primer orden para las empresas, son pocas las que reconocen las oportunidades de negocio que…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/gestion-del-cambio-el-reto-de-administrar-las-renovaciones"><span class="meta"><time datetime="2022-08-18">18 de agosto de 2022</time></span><h3>Gestión del cambio: El reto de administrar las renovaciones</h3><p>Continuamente las empresas se enfrentan a una necesidad de renovación para adaptarse al entorno económico, político, social, al mercado y a las…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/los-equipos-de-trabajo-el-soporte-de-las-organizaciones"><span class="meta"><time datetime="2022-08-11">11 de agosto de 2022</time></span><h3>Los equipos de trabajo, el soporte de las organizaciones</h3><p>Las metas y objetivos que se establecen en una organización difícilmente pueden ser alcanzados por una sola persona. El trabajo en equipo tiene un…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/hacia-una-operacion-sostenible"><span class="meta"><time datetime="2022-07-24">24 de julio de 2022</time></span><h3>Hacia una operación sostenible</h3><p>El compromiso de sostenibilidad en las empresas se debe adoptar desde un nivel estratégico y a partir de éste, aterrizarlo a todas las esferas…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/el-reto-del-cambio-climatico-y-su-costo-para-la-industria"><span class="meta"><time datetime="2022-07-14">14 de julio de 2022</time></span><h3>El reto del cambio climático y su costo para la industria</h3><p>El cambio climático es el reto más importante de la humanidad en los próximos años, sus repercusiones pueden ser catastróficas y de impacto…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/la-economia-circular-una-ventana-de-oportunidad-para-las-empresas-mexicanas"><span class="meta"><time datetime="2022-04-19">19 de abril de 2022</time></span><h3>La economía circular, una ventana de oportunidad para las empresas mexicanas</h3><p>Los efectos del cambio climático, la crisis económica provocada por la pandemia y la creciente escasez de recursos naturales que impacta a nivel…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/habilidades-requeridas-en-la-nueva-normalidad"><span class="meta"><time datetime="2022-02-20">20 de febrero de 2022</time></span><h3>Habilidades requeridas en la nueva normalidad</h3><p>Uno de los cambios que se generaron a partir de la pandemia es la necesidad de re-entrenarnos para desarrollar las habilidades y actitudes que…</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="#/publicaciones/el-primer-paso-en-la-mejora-continua-de-procesos"><span class="meta"><time datetime="2021-05-18">18 de mayo de 2021</time></span><h3>El primer paso en la mejora continua de procesos</h3><p>Las empresas buscan constantemente la manera de obtener mejores resultados. Analizar, revisar y adecuar nos permite minimizar errores y ejecutar de…</p><span class="more">Leer artículo →</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-articulos" hidden>
     <div class="wrap">
       <h2 class="h-2" id="h-articulos" style="margin-bottom:28px">Artículos</h2>
       <div class="pubs">
@@ -870,6 +928,848 @@ main:focus{outline:none}
         <p class="lead" style="margin-top:14px">Por ahora no hay sesiones programadas. Escríbenos y te avisamos de la siguiente.</p>
       </div>
       <div style="align-self:end"><a class="btn btn-ghost" href="#/contacto">Quiero recibir avisos</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================ ARTÍCULOS DEL BLOG ============================ -->
+<div data-page="/publicaciones/que-hay-detras-de-transformaciones-exitosas" data-title="¿Qué hay detrás de transformaciones exitosas? | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">¿Qué hay detrás de transformaciones exitosas?</h1>
+      <p class="article-meta"><time datetime="2023-06-12">12 de junio de 2023</time><span>3 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Hemos sido testigos de profundas transformaciones empresariales en los últimos tiempos que han implicado saltos cuánticos en los modelos de negocio, veamos cuatro de las más grandes a nivel global:</p>
+        <p>Apple pasó de ser un fabricante de computadoras personales a una empresa de tecnología de consumo, ofreciendo a sus clientes una amplia gama de teléfonos, tabletas, relojes inteligentes, televisores y experiencias de entretenimiento.</p>
+        <p>Amazon arrancó en 1995 siendo una librería en línea y el día de hoy se posiciona como la tienda minorista en línea más grande del mundo; además ofrece servicios en la nube, contenido streaming y dispositivos de hardware.</p>
+        <p>Netflix comenzó prestando servicios de renta de películas por correo, el día de hoy se posiciona como una de las empresas más influyentes en la industria del entretenimiento; es la plataforma de streaming más grande, ha revolucionado la manera en que se consume el entretenimiento y, además, de producir contenido propio adaptándose a las diferencias culturales y de consumo de cada región, estableciendo alianzas con productoras y creadores de contenido internacionales.</p>
+        <p>Microsoft se hizo famosa por su software de sistema operativo, ha evolucionado de ofrecer una colección de programas a un conjunto de herramientas que facilita y hace más eficiente el trabajo colaborativo. En los últimos años ha realizado grandes inversiones en su plataforma de servicios en la nube y ha adquirido empresas en áreas de inteligencia artificial y de ciberseguridad.</p>
+        <p>Grupo Femsa, ha experimentado una evolución significativa desde su fundación como empresa cervecera en México, a embotelladora y ha ido diversificando su cartera de negocios y expandido sus operaciones a nivel internacional. El día de hoy participa de manera muy importante en el comercio minorista, en el sector farmacéutico y en combustibles.</p>
+        <p>Sin duda existen muchos ejemplos más de transformaciones exitosas, sin embargo, me gustaría ir a trastienda y entender qué hay en común detrás de estos casos, más allá de una ejecución impecable de la estrategia, alineada a la operación, organización y cultura de cada una de estas empresas. Las personas son quienes llevan a cabo estas transformaciones, por lo que un liderazgo visionario, innovador y adaptativo es fundamental para lograrlo.</p>
+        <p>El líder necesita tener una visión clara de lo que quiere lograr, identificar las oportunidades y qué es lo que se necesita adaptar o cambiar para lograrlo; sabe que hacer más de lo mismo no será suficiente para permanecer en el mercado.</p>
+        <p>En este sentido, la capacidad de innovar es clave para liderar transformaciones; pensar fuera de la caja y desafiar el status quo para asumir el riesgo y experimentar cosas nuevas.</p>
+        <p>Claramente, un proceso de transformación es dinámico y, en muchas ocasiones, impredecible por lo que la capacidad de adaptarse a las circunstancias que se van presentando y ajustar el rumbo es fundamental.</p>
+        <p>Liderar un equipo en tiempos de turbulencia es una tarea desafiante para cualquiera. La transformación de la empresa comienza por la transformación de la cabeza. Independientemente del camino recorrido por la persona que lleva la batuta, el mundo no deja de cambiar por lo que el líder también necesita hacerlo con la humildad de aceptar que no importa cuán exitoso haya sido o lo sea, debe seguir aprendiendo y creciendo.</p>
+        <p>El entorno actual caracterizado por retos complejos y profundas demandas sociales requiere de una nueva manera de organizar y manejar las empresas, mediante un crecimiento inclusivo y sustentable, trabajando en un entorno más abierto y colaborativo que demanda nuevas maneras de liderar.</p>
+        <p>Y el líder no es solo la persona que va a la cabeza, el grupo de personas que le reporta de manera directa también necesita evolucionar. Existe una gran diferencia entre ser un grupo directivo y ser un equipo de liderazgo; el primero está compuesto por personas con un buen nivel jerárquico que cumplen diferentes responsabilidades, pero no necesariamente trabajan juntas de manera cohesiva. En este tipo de grupos se promueve y recompensa el individualismo, motivando tácitamente a los individuos a competir para obtener reconocimiento, aceptación, atención y compensación.</p>
+        <p>En contraparte, un equipo de liderazgo se caracteriza por tener una visión compartida, una comunicación transparente y un claro enfoque en generación de impacto. En la medida en que cada miembro del equipo comparta una visión común y comprenda su papel en ella y cómo contribuir a su consecución, la probabilidad de éxito será mucho mayor. La comunicación clara y frecuente es clave para lograr efectividad, de tal manera que cada uno de los miembros sepa qué es lo que se espera de él. Un equipo de liderazgo trabaja unido para enfrentar obstáculos y desafíos encontrando soluciones creativas sin perder de vista el objetivo final.</p>
+        <p>La transformación empresarial es un proceso complejo que implica cambios significativos en todos los ámbitos. El mundo acelerado y en constante cambio que nos toca vivir requiere de líderes visionarios, capaces de imaginar el futuro y preparar a sus empresas para llegar antes, solo así podrán garantizar la sostenibilidad en el largo plazo.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/la-inteligencia-artificial-y-la-creatividad-humana"><span class="meta">← Artículo anterior</span><h3>La inteligencia artificial y la creatividad humana</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-que-hay-detras-de-transformaciones-exitosas">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-que-hay-detras-de-transformaciones-exitosas">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/la-inteligencia-artificial-y-la-creatividad-humana" data-title="La inteligencia artificial y la creatividad humana | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">La inteligencia artificial y la creatividad humana</h1>
+      <p class="article-meta"><time datetime="2023-05-31">31 de mayo de 2023</time><span>3 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>La inteligencia artificial (IA) ha transformado numerosos aspectos de nuestra vida, incluyendo la creatividad. A medida que la IA continúa avanzando, es importante examinar cómo esta tecnología afecta la creatividad y cómo puede influir en nuestra forma de trabajar y crear.</p>
+        <p>En general, la IA puede ayudar a los creadores de contenido a ser más eficientes y efectivos en su trabajo. Por ejemplo, las herramientas de generación de texto basadas en IA pueden permitir a los escritores producir grandes cantidades de contenido en poco tiempo, lo que les da más tiempo para ser creativos y explorar nuevas ideas. Además, estas herramientas pueden ayudar a los creadores a descubrir nuevas ideas y tendencias. Mediante el análisis de grandes conjuntos de datos, las herramientas de análisis de datos basadas en IA pueden identificar patrones y tendencias que ayudan a los creadores a identificar oportunidades de creación de contenido y áreas en las que pueden enfocar su creatividad.</p>
+        <p>No obstante, también hay preocupaciones de que la IA pueda reemplazar la creatividad humana. Algunas personas temen que las herramientas de generación de contenido basadas en IA puedan producir contenido indistinguible del creado por humanos, lo que podría reducir la demanda de trabajo creativo humano. Además, existe la preocupación de que la IA pueda limitar la creatividad al proporcionar a los creadores un conjunto limitado de opciones y soluciones. Si los creadores dependen demasiado de la IA para obtener inspiración y soluciones, podrían pasar por alto algunas ideas más originales y creativas que solo pueden surgir de la mente humana.</p>
+        <p>A pesar de estas preocupaciones, el uso de la inteligencia artificial para actividades creativas relacionadas con las funciones actuales es ampliamente aceptado por la mayoría de las personas. De hecho, en México, hay tres personas que consideran que el uso de la IA puede potenciar la productividad por cada dos personas que creen que puede resultar en la pérdida de empleos.</p>
+        <p>Existen varios ejemplos interesantes de cómo se utiliza la inteligencia artificial para potenciar la creatividad en diferentes áreas. Una empresa alemana, Artomatix, utiliza IA para generar texturas y modelos 3D que se pueden utilizar en videojuegos y películas. Otra empresa, Obvious, creó una pintura que se subastó por más de $430,000 dólares. La pintura fue creada utilizando un algoritmo de aprendizaje automático que analizó miles de pinturas para determinar los patrones y estilos comunes utilizados por los artistas. Luego, el algoritmo generó una imagen única que imitaba el estilo de una pintura antigua.</p>
+        <p>En ambos casos, la IA se utilizó para ampliar las posibilidades creativas y ayudar a los artistas a crear piezas únicas y originales que de otra manera no habrían sido posibles. La IA tiene la capacidad de analizar y sintetizar grandes cantidades de datos, lo que puede ayudar a los artistas a descubrir nuevos patrones y tendencias que pueden inspirar su creatividad. Es importante destacar que la IA no reemplaza la creatividad humana, sino que la complementa y amplía. Los seres humanos tienen la capacidad de interpretar y aplicar esas ideas de formas únicas y creativas.</p>
+        <p>Si bien la IA puede ayudar a los creadores a ser más eficientes y efectivos, es fundamental seguir explorando los límites de la creatividad humana y buscar formas de incorporar la tecnología de manera que enriquezca y amplíe la creatividad humana en lugar de limitarla o reemplazarla. La inteligencia artificial tiene el potencial de ser una herramienta poderosa para potenciar la creatividad, siempre y cuando se utilice de manera adecuada y se respete la capacidad única de los seres humanos para generar ideas originales y creativas.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/habilidades-suaves-y-la-tecnologia"><span class="meta">← Artículo anterior</span><h3>Habilidades suaves y la tecnología</h3></a>
+        <a class="card pub next" href="#/publicaciones/que-hay-detras-de-transformaciones-exitosas"><span class="meta">Artículo siguiente →</span><h3>¿Qué hay detrás de transformaciones exitosas?</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-la-inteligencia-artificial-y-la-creatividad-humana">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-la-inteligencia-artificial-y-la-creatividad-humana">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/habilidades-suaves-y-la-tecnologia" data-title="Habilidades suaves y la tecnología | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Habilidades suaves y la tecnología</h1>
+      <p class="article-meta"><time datetime="2023-05-01">1 de mayo de 2023</time><span>3 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Hemos sido testigos de innumerables y profundos cambios en los últimos años. El modelo de trabajo en oficina en el que hemos desarrollado nuestra carrera profesional es radicalmente diferente y en este siglo XXI veremos que el esquema de trabajo híbrido llegó para quedarse y que las empresas que se enfocan en el bienestar de los trabajadores, en el desarrollo de habilidades suaves y en la automatización, son las que podrán fortalecer su ventaja competitiva mediante la atracción y retención del mejor talento. No quiero decir que las habilidades técnicas hayan quedado en el olvido, pero los grandes resultados se obtienen si existen las habilidades blandas que las potencien.</p>
+        <p>El informe más reciente de Infosys<sup>1</sup>, empresa líder en transformación digital, menciona que, en el entorno de mercado actual, el crecimiento de las empresas está claramente relacionado con la retención de talento. Las empresas que incrementaron la tasa de retención entre 2020 y 2022, tienen un 20% más de probabilidades de aumentar ingresos y utilidades que aquellas que no lo hicieron; por su parte, de acuerdo con el mismo documento, casi dos terceras partes de los ejecutivos consideran al trabajo remoto como un elemento importante en la atracción y retención de talento por el impacto que puede tener sobre el bienestar de los trabajadores.</p>
+        <p>Como lo mencionamos, los otros dos elementos determinantes en la competitividad de las empresas son la automatización y el desarrollo de habilidades suaves.</p>
+        <p>A medida que la automatización y la inteligencia artificial continúan avanzando, es probable que muchas habilidades técnicas sean reemplazadas por robots y programas informáticos, sin embargo, las habilidades suaves que se refieren a comportamientos y mentalidades son cada vez más relevantes. El cambio demográfico y la globalización también tienen un impacto importante en el posicionamiento de las habilidades suaves.</p>
+        <p>Las empresas necesitan personas inclusivas, que puedan resolver problemas, que tengan capacidad de interactuar y comunicarse con otras personas, que puedan hacer malabares para asumir mayores responsabilidades, que se adapten a nuevos roles y que tengan la inteligencia emocional suficiente ante la incertidumbre y variabilidad que vivimos.</p>
+        <p>Investigaciones realizadas por el America Succeeds<sup>2</sup>, institución comprometida con mejorar las oportunidades educativas en Estados Unidos, señalan entre sus principales hallazgos que:</p>
+        <ul>
+          <li>7 de las 10 competencias más solicitadas por las empresas son habilidades suaves</li>
+          <li>Estas habilidades son buscadas por los empleadores casi cuatro veces más que las técnicas</li>
+          <li>La demanda de este tipo de habilidades se da en todo tipo de trabajos (91% en puestos de liderazgo, 86% en operaciones comerciales y 81% en trabajos de ingeniería)</li>
+          <li>Los empleos que se encuentran en mayor riesgo de automatización en el corto plazo son los que tienen una menor demanda de habilidades suaves</li>
+        </ul>
+        <p>Si bien las habilidades que pueden dar mayor ventaja competitiva a las personas, y por ende a las empresas, varían según la industria y el trabajo específico, existen habilidades clave que se valoran en la mayoría de los trabajos:</p>
+        <p><strong>Comunicación efectiva</strong>: La capacidad de comunicarse de manera clara y efectiva, tanto verbalmente como por escrito, es fundamental en casi todos los trabajos; esta habilidad es importante para expresar ideas de manera clara y persuasiva, resolver conflictos y colaborar con otros.</p>
+        <p><strong>Pensamiento crítico</strong>: La capacidad de analizar y evaluar información de manera crítica es valiosa en cualquier trabajo; esta habilidad permite a las personas identificar problemas, evaluar opciones y tomar decisiones informadas.</p>
+        <p><strong>Adaptabilidad</strong>: La capacidad de adaptarse rápidamente a nuevos desafíos y entornos cambiantes es importante en un mundo laboral en constante cambio; las personas que pueden aprender nuevas habilidades y trabajar de manera efectiva en entornos ambiguos tienen una ventaja competitiva.</p>
+        <p><strong>Liderazgo</strong>: La capacidad de liderar, inspirar y motivar a otros es importante, independientemente del nivel dentro de la organización; esta habilidad, fomenta el compañerismo y el trabajo en equipo, por lo que alienta el buen desempeño.</p>
+        <p><strong>Inteligencia emocional</strong>: La capacidad de reconocer y manejar nuestras propias emociones y las emociones de los demás es fundamental para interactuar de manera efectiva con los demás; esta habilidad permite a las personas ser empáticas, mostrar compasión y gestionar conflictos de manera constructiva.</p>
+        <p><strong>Creatividad</strong>: La capacidad para pensar fuera de lo establecido, permite encontrar soluciones a los problemas; abre la puerta al cambio, a la innovación, a crear algo nuevo y original.</p>
+        <p>Si bien existen personas que poseen estas habilidades de manera innata, son susceptibles de desarrollarse o perfeccionarse. En la medida en que empresas y trabajadores profundicen en el desarrollo de estas habilidades, en paralelo a la automatización y la adopción digital, se logrará una mayor ventaja competitiva a nivel empresa y persona.</p>
+        <ol class="footnotes" aria-label="Notas">
+          <li><span class="n">1</span>Infosys Limited; The future of work 2023; India, 2023.</li>
+          <li><span class="n">2</span>America Succes; The high demand for durable skills; Denver, Co.; October 2021.</li>
+        </ol>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/acceso-a-la-energia-y-perspectiva-de-genero"><span class="meta">← Artículo anterior</span><h3>Acceso a la energía y perspectiva de género</h3></a>
+        <a class="card pub next" href="#/publicaciones/la-inteligencia-artificial-y-la-creatividad-humana"><span class="meta">Artículo siguiente →</span><h3>La inteligencia artificial y la creatividad humana</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-habilidades-suaves-y-la-tecnologia">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-habilidades-suaves-y-la-tecnologia">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/acceso-a-la-energia-y-perspectiva-de-genero" data-title="Acceso a la energía y perspectiva de género | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Acceso a la energía y perspectiva de género</h1>
+      <p class="article-meta"><time datetime="2023-04-05">5 de abril de 2023</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>El acceso a energéticos modernos transforma la vida de las personas al crear oportunidades. Sin embargo, cuando se diseñan políticas públicas relacionadas con el acceso a energía, tendemos a minimizar la diferencia en el impacto de este acceso desde un punto de vista de género. Las mujeres y niñas a menudo se ven más afectadas por la pobreza energética, por lo que abordar este problema requiere un enfoque sensible al género que tenga en cuenta las necesidades y perspectivas únicas de las mujeres y las niñas.</p>
+        <p>En muchas comunidades, la carga de trabajo doméstica no remunerada recae de manera desproporcionada en mujeres y niñas. Recolectar leña, cocinar o calentar la casa con leña o carbón son algunas de las tareas directamente relacionadas con la pobreza energética. Un mejor acceso a energía puede liberar tiempo de las mujeres permitiéndoles participar más plenamente en actividades económicas, generando ingresos y volviéndose más independientes. Además, el acceso a energía moderna puede mejorar las tasas de asistencia en las escuelas y los resultados educativos de las niñas, al reducir la cantidad de tiempo que dedican a recoger leña y cocinar.</p>
+        <p>Otro factor que afecta a los hogares en zonas rurales es la contaminación del aire interior generada por el uso de leña, carbón o biomasa para cocinar. La Organización Mundial de la Salud estima que más de 4 millones de muertes prematuras al año se atribuyen a la contaminación del aire en estos hogares, siendo las mujeres y niños los más afectados.</p>
+        <p>En México, a pesar de que la cobertura de electricidad es cercana a los niveles del resto de los países de la OCDE, el nivel de acceso a combustibles es muy distinto. La COFEPRIS estima que el 20% de la población utiliza leña para cocinar, y que la mayor parte se concentra en zonas rurales de la región sur del país, en los estados de Guerrero, Oaxaca y Chiapas. Estos niveles se encuentran más cercanos a países pobres que a un país desarrollado, y resultan en los impactos mencionados anteriormente.</p>
+        <p>Mejorar el acceso a la energía puede desempeñar un papel fundamental en la promoción de la igualdad de género y el empoderamiento de las mujeres. Es necesario posicionar el acceso universal a la energía de manera que sea sensible al género, de modo que sea un habilitador e impulsor clave de la recuperación y crecimiento económico inclusivo, sostenible, resiliente y como parte integral de la transición hacia un sistema energético justo.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/participacion-del-sector-privado-en-la-facilitacion-de-energia-moderna"><span class="meta">← Artículo anterior</span><h3>Participación del sector privado en la facilitación de energía moderna</h3></a>
+        <a class="card pub next" href="#/publicaciones/habilidades-suaves-y-la-tecnologia"><span class="meta">Artículo siguiente →</span><h3>Habilidades suaves y la tecnología</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-acceso-a-la-energia-y-perspectiva-de-genero">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-acceso-a-la-energia-y-perspectiva-de-genero">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/participacion-del-sector-privado-en-la-facilitacion-de-energia-moderna" data-title="Participación del sector privado en la facilitación de energía moderna | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Participación del sector privado en la facilitación de energía moderna</h1>
+      <p class="article-meta"><time datetime="2023-03-08">8 de marzo de 2023</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>A lo largo de los últimos tres años, México ha enfrentado grandes retos para recuperarse del impacto que generó la pandemia en la economía del país y en la vida cotidiana de las personas. Las desigualdades en el acceso a servicios de energía modernos, como el gas natural o la electricidad, marcaron diferencias importantes en la calidad de vida de las personas y en la capacidad para enfrentar la crisis.</p>
+        <p><strong>Según la Agencia Internacional de Energía (AIE), más de 700 millones de personas en todo el mundo carecen de acceso a la electricidad y alrededor de 2,400 millones siguen utilizando leña para cocinar. </strong></p>
+        <p>El acceso a servicios energéticos modernos es esencial para el desarrollo económico y la inclusión social. La AIE ha revelado que en las economías avanzadas, los hogares con menores ingresos consumen en promedio solo un tercio de la energía utilizada en los hogares con ingresos más altos. En las economías emergentes y en desarrollo, los hogares más pobres consumen nueve veces menos energía moderna que los hogares más ricos. Algo similar sucede en México, la situación de pobreza se relaciona directamente con el acceso limitado a internet y con un mayor consumo de leña a nivel residencial. Todo esto pone en evidencia la necesidad de que se implementen medidas para integrar el desarrollo energético en las economías, especialmente en las menos desarrolladas.</p>
+        <p>El crecimiento de la demanda de energía en un escenario post pandemia y de precios altos, abre la oportunidad para el desarrollo de proyectos orientados a mejorar el acceso a servicios energéticos e incrementar la oferta de energía de alta calidad. Las alternativas son diversas; por ejemplo: construcción de sistemas de energía solar o eólica para la electrificación de viviendas, negocios y actividades productivas en comunidades remotas; instalación de servicios de combustibles modernos en localidades alejadas de los centros urbanos; el desarrollo de nuevas tecnologías de generación de electricidad—hidroeléctricas a hilo de agua, bioenergía, cogeneración eficiente o hidrógeno verde—, entre otras.</p>
+        <p>La participación del sector privado es fundamental para facilitar estas alternativas. Las empresas pueden contribuir a garantizar un acceso más equitativo mediante cuatro acciones básicas: 1) la adopción de prácticas empresariales sostenibles, 2) la colaboración con otras organizaciones para apoyar iniciativas que promuevan el acceso a la energía en comunidades más vulnerables, 3) la formación y capacitación en temas de eficiencia energética y energías renovables, y 4) fomentar el desarrollo de soluciones tecnológicas innovadoras para el acceso a la energía en zonas remotas y rurales.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/la-necesidad-de-protegernos-contra-los-ataques-ciberneticos"><span class="meta">← Artículo anterior</span><h3>La necesidad de protegernos contra los ataques cibernéticos</h3></a>
+        <a class="card pub next" href="#/publicaciones/acceso-a-la-energia-y-perspectiva-de-genero"><span class="meta">Artículo siguiente →</span><h3>Acceso a la energía y perspectiva de género</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-participacion-del-sector-privado-en-la-facilitacion-de-energia-moderna">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-participacion-del-sector-privado-en-la-facilitacion-de-energia-moderna">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/la-necesidad-de-protegernos-contra-los-ataques-ciberneticos" data-title="La necesidad de protegernos contra los ataques cibernéticos | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">La necesidad de protegernos contra los ataques cibernéticos</h1>
+      <p class="article-meta"><time datetime="2023-02-23">23 de febrero de 2023</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>El riesgo de exponerse a ataques y amenazas cibernéticas es cada vez mayor; se estima que solo en los últimos dos años este tipo de delito aumentó entre un 30% y 50%. La transformación digital ha sido a la vez una ventana de oportunidad y un riesgo para las empresas.</p>
+        <p>En 2022, el Centro Nacional de Respuestas a Incidentes Cibernéticos reportó un aumento del 142% entre 2015 y 2017; en agosto del 2022, el director nacional del Comité de Tecnologías de la Información de Index afirmó que durante el primer semestre del año se habían registrado 80,000 millones de ataques cibernéticos en empresas y organizaciones mexicanas.</p>
+        <p>Las amenazas son muy variadas: destrucción y daño físico de los activos, propagación de distintos Virus, Ramsonware (secuestro de información), Malware (Software malicioso), Spyware (Software espía), Phishing (obtención de información sensible), Pharming (obtención de información paulatinamente), Spoofing (suplantación), Sniffers (espías en medio de la red), Sexting (textos sexuales mal utilizados), ciber-grooming (corrupción de menores), social engineering (montajes de información engañosos), fraudes de la industria de crédito (PCI), Dos y DDos (Denegación de servicio y también distribuido), entre otros.</p>
+        <p>Para evitar afectaciones graves es importante mantenerse actualizado con conocimientos y herramientas de ciberseguridad que permitan: identificar, proteger, detectar, responder y recuperar la información ante amenazas y ataques cibernéticos. Garantizando esos cinco elementos será posible mantener la Integridad, confidencialidad y disponibilidad de la información.</p>
+        <p>Lo anterior implica:</p>
+        <ul>
+          <li>Asegurarse de que los programas de software, sistemas e infraestructura estén actualizados con las últimas correcciones</li>
+          <li>Mantener un buen antivirus instalado en los dispositivos</li>
+          <li>Mantener respaldada la información y mantener una contraseña fuerte para las cuentas (incluidas las de verificación de dos pasos)</li>
+          <li>La existencia de políticas de tecnologías de la información al interior de la empresa</li>
+          <li>Una política nacional de ciberseguridad y regulatoria.</li>
+        </ul>
+        <p>Los controles que se requieren en cada empresa dependen de la función o giro del negocio y del valor que se le da a la información y los equipos que se manejan. En cualquier caso, lo más importante es establecer procesos y procedimientos formales de ciberseguridad y decidir qué salvaguardas utilizar para mantener la información y la infraestructura bajo la triada CID:</p>
+        <ul>
+          <li>Confidencialidad: Medidas de acceso a la información.</li>
+          <li>Integridad: Medidas para mantener la información intacta.</li>
+          <li>Disponibilidad: Medidas para que la información sea accesible en el momento deseado.</li>
+        </ul>
+        <p>¿Qué primeras acciones pueden implementar las empresas en materia de seguridad informática?</p>
+        <ol>
+          <li>Establecer una política de seguridad de la información que incluya: lineamientos para la seguridad de la información, requisitos de acceso a la misma, procesos para informar incidentes de seguridad, procedimientos para la toma de decisiones, acuerdos de confidencialidad y ética profesional, entre otras.</li>
+          <li>Identificar el nivel de seguridad deseado y establecer los controles pertinentes.</li>
+          <li>Crear una cultura de seguridad: Los empleados deben ser conscientes de la importancia de la seguridad informática y entender sus responsabilidades; deben ser informados sobre los riesgos y cómo abordarlos.</li>
+          <li>Proporcionar una formación adecuada: Los empleados deben estar capacitados para identificar y responder a los riesgos de seguridad. Esto incluye conocimientos de los procesos y políticas de ciberseguridad.</li>
+        </ol>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/la-empatia-una-capacidad-fundamental-en-los-lideres"><span class="meta">← Artículo anterior</span><h3>La empatía: una capacidad fundamental en los líderes</h3></a>
+        <a class="card pub next" href="#/publicaciones/participacion-del-sector-privado-en-la-facilitacion-de-energia-moderna"><span class="meta">Artículo siguiente →</span><h3>Participación del sector privado en la facilitación de energía moderna</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-la-necesidad-de-protegernos-contra-los-ataques-ciberneticos">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-la-necesidad-de-protegernos-contra-los-ataques-ciberneticos">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/la-empatia-una-capacidad-fundamental-en-los-lideres" data-title="La empatía: una capacidad fundamental en los líderes | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">La empatía: una capacidad fundamental en los líderes</h1>
+      <p class="article-meta"><time datetime="2023-02-07">7 de febrero de 2023</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Hoy en día, las organizaciones buscan líderes empáticos, con la capacidad de ofrecer un trato cercano y humano, una mentalidad abierta hacia los trabajadores y poder conectar con ellos. Para saber si lo están logrando primero debemos entender lo que es la empatía, ya que no todas las personas lo tienen claro y muchas creen serlo cuando en realidad solo están desarrollando “vínculos” con la finalidad de obtener un beneficio para ellos mismos.</p>
+        <p>La empatía, de acuerdo con la RAE es la “identificación mental y afectiva de un sujeto con el estado de ánimo del otro”. Un verdadero líder se forma gracias a la empatía que genera con la gente, esto a su vez provoca confianza, respeto y lealtad.</p>
+        <p>Entonces, la clave está en conocer las cualidades y características que se requieren en este sentido. Un líder empático, escucha y entiende a su equipo de trabajo; valora el talento y las habilidades individuales; Visualiza el resultado final y lo comparte con los demás; sabe crear conexiones; y fomenta el entendimiento.<sup>1</sup></p>
+        <p>No todos los “líderes” logran ser empáticos, quizás el problema radica en que creen que al serlo tendrían que pensar igual que sus diferentes seguidores, cuando no debe ser así. Incluso podrán pensar que, al generar empatía, pueden caer en un punto donde se sientan vulnerables y lleguen a perder respeto y/o admiración hacía ellos, esto es lamentable ya que realmente desconocen que al ser lideres empáticos crean mayores vínculos y desde mi punto de vista una lealtad inquebrantable.</p>
+        <p>La empatía promueve la unión de los equipos y forma la base de un lugar de trabajo resiliente e inclusivo. Según un reportaje de Forbes, menciona que el 96% de los empleados creen que mostrar empatía es una forma importante de incrementar la retención de empleados. Sin embargo, la misma encuesta nos indica que mientras el 92% de los CEO’s sienten que su organización es empática, sólo el 50% de sus empleados dicen que su CEO realmente lo es.</p>
+        <p>Un líder empático es imprescindible para crear aspiraciones y fomentar el crecimiento dentro de las empresas, tanto personal como grupal, resultando en un mejor trabajo en equipo, una comunicación más efectiva dentro de la organización y un ambiente de trabajo más innovador, en este sentido, un estudio elaborado por Catalyst encontró que las personas con líderes empáticos eran un 34% más innovadoras que aquellas con líderes que no lo son.</p>
+        <p>Es importante que cada líder trabaje sus vínculos y relaciones con aquellos a su alrededor, los cuales podrán convertirse en líderes para otras personas y así, como una cadena, poco a poco mejorar individualmente y en un futuro lograr convertirnos en una mejor sociedad.</p>
+        <p>Los directores pueden realizar actividades dentro de sus equipos de trabajo, donde se involucren directamente con cada integrante, resultando en la creación de relaciones positivas y el desarrollo de una cultura dentro de la organización, impulsando los resultados y facilitando la consecución de los objetivos.</p>
+        <ol class="footnotes" aria-label="Notas">
+          <li><span class="n">1</span>Fuente: Andrea Yriberry. Conferencia “Donde vive la empatía, abunda un liderazgo”. Leadership 101. Liderazgo y Vivencia.</li>
+        </ol>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/la-industria-4-0-en-la-transformacion-de-la-cadena-de-valor"><span class="meta">← Artículo anterior</span><h3>La Industria 4.0 en la transformación de la cadena de valor</h3></a>
+        <a class="card pub next" href="#/publicaciones/la-necesidad-de-protegernos-contra-los-ataques-ciberneticos"><span class="meta">Artículo siguiente →</span><h3>La necesidad de protegernos contra los ataques cibernéticos</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-la-empatia-una-capacidad-fundamental-en-los-lideres">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-la-empatia-una-capacidad-fundamental-en-los-lideres">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/la-industria-4-0-en-la-transformacion-de-la-cadena-de-valor" data-title="La Industria 4.0 en la transformación de la cadena de valor | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">La Industria 4.0 en la transformación de la cadena de valor</h1>
+      <p class="article-meta"><time datetime="2022-11-03">3 de noviembre de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Para que una empresa pueda triunfar en este complejo entorno actual, donde cada vez hay más competitividad y las necesidades del mercado cambian de forma acelerada, es indispensable que parte de la planeación estratégica esté enfocada en la optimización de sus operaciones.</p>
+        <p>Dicha optimización incluye el uso eficiente de recursos materiales, la correcta asignación y distribución de responsabilidades y la reducción de tiempos en los procesos. Lograr optimizar la operación se ha convertido en la norma y ha marcado un factor de diferenciación dentro de la industria.</p>
+        <p>Hoy en día, las empresas deben decidir cómo aprovechar los avances tecnológicos para poder adaptarse y optimizar el uso de recursos y así, maximizar la creación de valor dentro de sus negocios. Los hallazgos tecnológicos y las nuevas tendencias han ido cambiando con los años y son los que han marcado las revoluciones industriales.</p>
+        <p>Actualmente, nos encontramos en una cuarta revolución industrial, la cual surge gracias a los avances en la automatización y la conectividad que permiten que exista un mayor flujo de información e interrelación entre áreas y procesos dentro de las empresas. Esta industria 4.0 orientada a la digitalización se apoya en la automatización para generar información y demuestra el potencial que tiene el uso eficiente de dicha información para la toma de decisiones y la optimización. Los nuevos sistemas electrónicos permiten generar grandes cantidades de datos que pueden ser explotados para realizar análisis más eficientes y así optimizar la operación. Asimismo, otro gran avance es el uso de la nube, la cual facilita el acceso y manejo de información sin importar dónde y cómo estén distribuidas las operaciones de las empresas.</p>
+        <p>La conectividad se ha convertido en una fortaleza que las empresas deben explotar. Uno de los problemas operativos más comunes es la falta de comunicación entre áreas y procesos. El tener herramientas diseñadas para unificar la operación y agilizar el flujo de información permite eliminar estos problemas y a su vez generan una cultura de trabajo orientada a la toma de decisiones informada, basada en información real y precisa. Mucha de esta información proviene de la implementación de sistemas de gestión automatizados que a su vez reducen la necesidad de realizar operaciones manuales. La digitalización propuesta por la industria 4.0 ayuda a mitigar riesgos y garantizar que la operación se desarrolle sin problemas.</p>
+        <p>El gran reto que todo esto presenta para las empresas es el poder evolucionar y transformar sus operaciones para capitalizar todos los beneficios que la industria 4.0 conlleva. Aunque todo cambio presenta ciertos riesgos y una curva de aprendizaje conforme se implementa, es claro que los avances tecnológicos y las oportunidades de optimización continuarán siendo la norma. Actualmente, este proceso de digitalización se está viviendo en múltiples industrias y está potenciado por las innovaciones generadas gracias a las revoluciones industriales pasadas. Lo interesante será ver qué cambios y novedades brindará la industria 4.0 en el mediano y largo plazo.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/los-cimientos-de-la-colaboracion-en-los-equipos-de-trabajo"><span class="meta">← Artículo anterior</span><h3>Los cimientos de la colaboración en los equipos de trabajo</h3></a>
+        <a class="card pub next" href="#/publicaciones/la-empatia-una-capacidad-fundamental-en-los-lideres"><span class="meta">Artículo siguiente →</span><h3>La empatía: una capacidad fundamental en los líderes</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-la-industria-4-0-en-la-transformacion-de-la-cadena-de-valor">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-la-industria-4-0-en-la-transformacion-de-la-cadena-de-valor">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/los-cimientos-de-la-colaboracion-en-los-equipos-de-trabajo" data-title="Los cimientos de la colaboración en los equipos de trabajo | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Los cimientos de la colaboración en los equipos de trabajo</h1>
+      <p class="article-meta"><time datetime="2022-10-17">17 de octubre de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Las organizaciones que buscan crecer y mantener una posición competitiva en el mercado requieren de equipos sólidos y colaborativos. La colaboración marca una diferencia significativa en el impacto que logra el equipo ya que fomenta el desarrollo de todo el potencial del mismo.</p>
+        <p>Como líderes, necesitamos fomentar en cada uno de nuestros colaboradores el desarrollo de habilidades y herramientas que favorezcan la conexión con los demás, la comunicación y la retroalimentación en ambos sentidos. La colaboración se puede desarrollar a partir de tres habilidades básicas:</p>
+        <ol>
+          <li><strong>Escuchar de manera activa.</strong> Cuando verdaderamente escuchamos, invitamos a los demás a contribuir con sus propias ideas, mejoramos las relaciones de trabajo y evitamos el conflicto. <em>Modela la escucha activa en tu equipo, reconoce lo que dicen los demás y has preguntas que te permitan llevar un seguimiento adecuado, evita centrarte en promover tus propias ideas.</em></li>
+          <li><strong>Practicar la empatía.</strong> Escuchar las diferencias con curiosidad, no con juicio, esto permite que se logren resultados positivos. <em>Invita a las personas a asumir que los compañeros también son competentes y tienen pensamientos inteligentes; a utilizar la investigación, el interés, para explorar otros puntos de vista.</em></li>
+          <li><strong>Apertura a la retroalimentación.</strong> A la mayoría de las personas le incomoda dar y/o recibir retroalimentación, lo que limita las posibilidades de mejora a nivel personal y, por ende, a nivel de todo el equipo. <em>Apoya dando retroalimentación efectiva, siendo claro y describiendo los comportamientos y su impacto.</em></li>
+        </ol>
+        <p>También debemos recordar que la base de la colaboración es la confianza.</p>
+        <p>Cuando los colaboradores conocen el objetivo y la importancia de su consecución, valoran lo que están haciendo y comprenden el valor que su trabajo genera en la organización. Es por esto por lo que se vuelve importante discutir, de manera constante y como equipo, en donde deben de enfocar su atención para generar el mayor impacto.</p>
+        <p>De manera similar, cuando las personas conocen a los miembros de su equipo, es más probable que confíen en la aportación de cada uno para la consecución de los resultados. Confían en que la suma de habilidades puede contribuir a alcanzar los objetivos. Utiliza reuniones de equipo para subrayar el rol de todos y las habilidades que cada uno de los miembros del equipo brinda al proyecto.</p>
+        <p>No olvides que los miembros de un equipo están más motivados a colaborar cuando saben que sus esfuerzos se notan y son apreciados. Es importante reconocer a todos en el equipo por sus contribuciones únicas—y no dejar de notar a aquellos que trabajan o se mueven con un perfil bajo, cuyo trabajo puede pasar desapercibido a pesar de la importancia que tiene. Cuando escuches mensajes de tus clientes, de otras áreas o departamentos, sobre el impacto positivo de tu equipo, compártelo con ellos, no lo dejes únicamente para ti.</p>
+        <p>En síntesis, la diferencia entre un grupo de individuos y un equipo de trabajo es la colaboración—un esfuerzo colectivo para la obtención de una meta común—. La colaboración es una habilidad que puedes ayudar a desarrollar modelando la escucha activa, mostrando empatía y dando y recibiendo retroalimentación.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/industria-del-litio-en-mexico"><span class="meta">← Artículo anterior</span><h3>Industria del litio en México</h3></a>
+        <a class="card pub next" href="#/publicaciones/la-industria-4-0-en-la-transformacion-de-la-cadena-de-valor"><span class="meta">Artículo siguiente →</span><h3>La Industria 4.0 en la transformación de la cadena de valor</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-los-cimientos-de-la-colaboracion-en-los-equipos-de-trabajo">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-los-cimientos-de-la-colaboracion-en-los-equipos-de-trabajo">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/industria-del-litio-en-mexico" data-title="Industria del litio en México | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Industria del litio en México</h1>
+      <p class="article-meta"><time datetime="2022-10-17">17 de octubre de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>La necesidad de contar con nuevas formas de generación y almacenamiento de energía menos contaminantes y más accesibles ha posicionado al litio como elemento clave para el desarrollo tecnológico a nivel mundial.</p>
+        <p>Prácticamente cualquier aparato electrónico que utilizamos requiere de baterías, desde celulares, laptops, autos eléctricos y hasta aviones de última generación<sup>1</sup>. Las baterías de litio presentan varias ventajas con respecto a las pilas tradicionales, mayor vida útil, mayor tiempo de almacenamiento y menor peso. Estas cualidades, además de la posibilidad de recarga y descarga, lo han convertido en uno de los elementos favoritos para la fabricación de baterías requeridas para aparatos electrónicos y vehículos eléctricos.</p>
+        <p>Aunado a lo anterior, el litio juega un papel clave para la transición energética, ya que provee una solución a la intermitencia de las energías renovables, permitiendo almacenar energía que pueda ser utilizada cuando las instalaciones eólicas o solares no puedan generarla.</p>
+        <p>Durante los últimos años, el mercado de litio ha crecido significativamente. La producción mundial en el 2021<sup>2</sup>superó las 100,000 toneladas, un aumento de 21% con respecto al 2020; triplicando el volumen entre 2015 y el año pasado. Además, la exploración continua de nuevos yacimientos ha provocado que las reservas de litio mundial hayan incrementado sustancialmente durante el último año, en 2021 sumaron alrededor de 89 millones de toneladas.</p>
+        <p>Hoy en día, México no cuenta con yacimientos en explotación; según el Servicio Geológico de Estados Unidos, México se encuentra en el lugar número 10 de países con mayores reservas de litio a nivel mundial, aunque en etapas muy tempranas de desarrollo.</p>
+        <p>El pasado 20 de abril del 2022, el Senado de la República aprobó reformar la Ley Minera en la que se nombra al litio como patrimonio de México, lo que implica que su exploración, explotación, beneficio y aprovechamiento estarán a cargo exclusivamente del Estado a través de un organismo público descentralizado. Se le declara de utilidad pública, por lo que no se otorgarán concesiones, licencias, contratos, permisos o autorizaciones en la materia.</p>
+        <p>Lo anterior implica retos técnicos y financieros importantes. Por un lado, una gran inversión por parte del gobierno mexicano, a la par de tecnología y recursos humanos especializados que permitan explotar este recurso. Para lograr lo anterior, México requiere un entorno de certidumbre jurídica que fomente la inversión para transitar a energías más limpias y competitivas a nivel mundial.</p>
+        <ol class="footnotes" aria-label="Notas">
+          <li><span class="n">1</span>Secretaría de Economía; Perfil de mercado del Litio; Diciembre, 2018</li>
+          <li><span class="n">2</span>U.S. Geological Survey; Lithium; Mineral Commodity Summaries; January 2022</li>
+        </ol>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/energia-fotovoltaica-una-alternativa-con-gran-potencial-en-mexico"><span class="meta">← Artículo anterior</span><h3>Energía fotovoltaica, una alternativa con gran potencial en México</h3></a>
+        <a class="card pub next" href="#/publicaciones/los-cimientos-de-la-colaboracion-en-los-equipos-de-trabajo"><span class="meta">Artículo siguiente →</span><h3>Los cimientos de la colaboración en los equipos de trabajo</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-industria-del-litio-en-mexico">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-industria-del-litio-en-mexico">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/energia-fotovoltaica-una-alternativa-con-gran-potencial-en-mexico" data-title="Energía fotovoltaica, una alternativa con gran potencial en México | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Energía fotovoltaica, una alternativa con gran potencial en México</h1>
+      <p class="article-meta"><time datetime="2022-10-03">3 de octubre de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>La energía fotovoltaica es una fuente renovable que se obtiene al convertir los rayos ultravioletas del sol en electricidad. Esta tecnología se basa en el efecto fotoeléctrico, que consiste en la absorción de fotones y la posterior emisión de electrones, generando una corriente eléctrica.</p>
+        <p>La energía fotovoltaica es una fuente de energía que no contamina, ayuda a la reducción de emisiones y promueve la generación de nuevos empleos. México posee las condiciones climáticas adecuadas para detonar proyectos de este tipo.</p>
+        <p>Un informe elaborado por la Agencia Internacional de Energías Renovables (IRENA) señala que México es uno de los países con mayor potencial para el desarrollo de una industria eléctrica a base de energía fotovoltaica, al recibir diariamente un promedio de 5.5 kWh/m2 de radiación solar. Más aún, en la zona noroeste del país la radiación alcanza los 8 kWh/m2 durante primavera y verano. Estas condiciones hacen que el 85% del territorio sea óptimo para proyectos solares.</p>
+        <p>La capacidad de tecnología fotovoltaica instalada total en 2021 fue de 5,955 MW,<sup>1</sup>esta capacidad representó 22.14% de las fuentes renovables; cabe destacar que el 99.90% de la capacidad fotovoltaica proviene de permisionarios privados<sup>2</sup>.</p>
+        <p>A pesar de que el incremento de generación fotovoltaica ha sido considerable en los últimos años (de 2018 a 2021 aumentó 528%), México no está aprovechando todo el potencial que ofrece nuestro territorio.</p>
+        <p>Según información del PRODESEN 2022-2036, al 31 de diciembre del 2021, estaban en operación 14 centrales privadas de generación fotovoltaica, ubicadas principalmente en el norte y noroeste del país. El Parque Solar Villanueva, ubicado en el municipio de Viesca, Coahuila, es el de mayor capacidad con 363 MW; en segundo lugar, está la Central Pachamama en el municipio El Llano, Aguascalientes, con una capacidad de 300 MW; y en tercer lugar está el Parque Solar Villanueva Tres con una capacidad de 275 MW<sup>3</sup>.</p>
+        <p>Cálculos de Nelson Delgado, director de la Asociación Mexicana de Energía Solar (ASOLMEX), estiman que, para alcanzar la meta de energías limpias en 2030, México requiere de una inversión de 13,000 millones de dólares en proyectos solares a gran escala, lo que permitiría alcanzar los 15,040 MW.</p>
+        <p>Para lograr estos niveles se requiere de una estrategia puntual para impulsar a la industria de forma permanente y generalizada. En este sentido, se vuelve crítico elaborar políticas públicas que promuevan proyectos de generación solar que impulsen el desarrollo de la industria a través de inversiones públicas y privadas, promover el crecimiento económico y sostenible del país.</p>
+        <ol class="footnotes" aria-label="Notas">
+          <li><span class="n">1</span>Incluye CFE y privados; No se considera las Centrales Eléctricas de Frenos Regenerativos, la Generación Distribuida Fotovoltaica (GD-FV).</li>
+          <li><span class="n">2</span>SENER con datos de CENACE, CRE y CFE.</li>
+          <li><span class="n">3</span>SENER; PRODESEN 2022-2036: Anexo I, Infraestructura del Sistema Eléctrico Nacional; 01 de junio de 2022.</li>
+        </ol>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/construir-a-partir-del-conflicto"><span class="meta">← Artículo anterior</span><h3>Construir a partir del conflicto</h3></a>
+        <a class="card pub next" href="#/publicaciones/industria-del-litio-en-mexico"><span class="meta">Artículo siguiente →</span><h3>Industria del litio en México</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-energia-fotovoltaica-una-alternativa-con-gran-potencial-en-mexico">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-energia-fotovoltaica-una-alternativa-con-gran-potencial-en-mexico">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/construir-a-partir-del-conflicto" data-title="Construir a partir del conflicto | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Construir a partir del conflicto</h1>
+      <p class="article-meta"><time datetime="2022-09-20">20 de septiembre de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>La gran mayoría de las personas tratamos de evitar los conflictos ya que le damos una connotación negativa. Olvidamos que los conflictos son inevitables, es natural que las personas no siempre estemos de acuerdo y que cada una vea la situación desde su propia perspectiva en función de su historia y experiencias.</p>
+        <p>Disentir no debe implicar un problema sin solución, la llegada a un callejón sin salida. Los conflictos que se caracterizan por la fricción destruyen las relaciones. Esto sucede cuando no nos escuchamos unos a otros, cuando somos agresivos y atacamos los puntos de vista de los demás, cuando tomamos la discusión a nivel personal; cuando hay fricción hay interrupciones constantes, las participaciones son ríspidas y, en muchas ocasiones, agresivas.</p>
+        <p>En contraposición, cuando los desacuerdos derivan en conflicto, pero se manejan de manera adecuada podemos aprender unos de otros y establecer relaciones más fuertes; creando una atmósfera de tensión productiva que nos ayuda a mejorar los resultados y a generar más ideas.</p>
+        <p><strong><em>El conflicto constructivo</em></strong></p>
+        <p>Generalmente se caracterizan por ser:</p>
+        <ul>
+          <li><strong>Un debate respetuoso de opciones</strong>. Las personas se centran en el problema, buscan la mejor solución juntos, no tratan de destruirse unos a otros.</li>
+          <li><strong>Sobre el trabajo.</strong> Sobre qué, cómo, cuándo o dónde deben de hacerse las cosas. Cuando un conflicto se vuelve personal las personas se ponen a la defensiva y se aferran a sus posiciones, lo que hace más difícil la escucha y el aprendizaje.</li>
+          <li><strong>Directo.</strong> La conversación se da de manera directa entre las partes involucradas, tanto en reuniones de trabajo, como en mensajes escritos o en discusiones informales; no involucra quejas hacia otros, agresiones o sabotajes pasivo-agresivos.</li>
+          <li><strong>Susceptibles de ser resueltos. </strong>No significa encontrar la solución perfecta, implica poner sobre la mesa diferentes tipos de vista, discutir las opciones y seguir adelante de manera conjunta.</li>
+        </ul>
+        <p><strong><em>La resolución de conflictos evita resentimientos y afectaciones en la efectividad, motivación y bienestar del equipo.</em></strong></p>
+        <p><strong> </strong></p>
+        <p>En un equipo de trabajo siempre habrá la posibilidad de que se presenten conflictos, es fundamental que identifiques el momento en el que se está presentando y la manera en que se están abordando. Si identificas miembros del equipo que están involucrados en conflictos no sanos y que no pueden resolverlos solos, ayúdales a seguir adelante a través de los siguientes pasos:</p>
+        <p>Es importante elegir de manera asertiva cómo y cuándo involucrarte. Es importante que no te conviertas en un árbitro siempre presente, los miembros de tu equipo deben aprender a manejar cierta fricción por sí mismos.</p>
+        <p>Si desarrollamos la capacidad de nuestros colaboradores para resolver sus diferencias, fortaleceremos la resiliencia y podremos crecer y construir a partir de los conflictos.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/sostenibilidad-y-talento-en-las-empresas"><span class="meta">← Artículo anterior</span><h3>Sostenibilidad y talento en las empresas</h3></a>
+        <a class="card pub next" href="#/publicaciones/energia-fotovoltaica-una-alternativa-con-gran-potencial-en-mexico"><span class="meta">Artículo siguiente →</span><h3>Energía fotovoltaica, una alternativa con gran potencial en México</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-construir-a-partir-del-conflicto">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-construir-a-partir-del-conflicto">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/sostenibilidad-y-talento-en-las-empresas" data-title="Sostenibilidad y talento en las empresas | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Sostenibilidad y talento en las empresas</h1>
+      <p class="article-meta"><time datetime="2022-09-01">1 de septiembre de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>A pesar de que la sostenibilidad se ha vuelto un tema de primer orden para las empresas, son pocas las que reconocen las oportunidades de negocio que esta tendencia puede brindarles. Hacia afuera, una empresa sostenible aporta a la comunidad valor social, económico y medio ambiental; hacia adentro, genera oportunidades, promueve la innovación y fortalece la ventaja competitiva.</p>
+        <p>La necesidad de ser sostenible no es únicamente un asunto interno, tanto accionistas como consumidores y colaboradores ejercen una presión cada vez mayor para exigir a las empresas actuar comprometidamente en la solución de problemas relacionados con cambio climático, diversidad, inclusión, equidad y justicia social, entre otros. Y esta exigencia permea al mercado laboral, los colaboradores responden a las empresas en función de su compromiso con el desarrollo sostenible.</p>
+        <p>Según el Informe anual InfoJobs-Esade sobre el Estado del Mercado Laboral (2020), el 81% de las personas que buscan empleo en España se informa sobre la reputación de la empresa antes de postularse y el 70% ha descartado la posibilidad de postularse, como consecuencia de una mala reputación. Algo similar sucede en otros países, de acuerdo con los datos publicados por KPMG sobre preferencias profesionales, el 84% de los estudiantes encuestados afirma que no estaría dispuesto a trabajar en una organización cuyos valores no mantuvieran una línea de congruencia con los suyos; prácticamente 9 de cada 10 consideran importante que la organización marque una diferencia positiva en el mundo.</p>
+        <p>Aún más, la generación <em>millenial</em>, que pronto será la mayoría de la fuerza laboral, busca trabajar para empresas con propósito y no sólo están interesados en las empresas que invierten en sostenibilidad, sino que también quieren trabajar para empresas que incorporan la sostenibilidad en su estrategia de negocio. El 70% de los <em>millenials</em> afirma que se quedaría en una empresa que cuente con un plan de sostenibilidad fuerte, y el 64% no aceptaría una oferta de trabajo en una empresa que no priorice la responsabilidad social corporativa.</p>
+        <p>Es claro que el interés de las empresas por atraer y retener el mejor talento, es fundamental para mantener la ventaja competitiva. Investigaciones de Harvard Business Review (por ejemplo, Whelan &amp; Fink, 2016) muestran que para los colaboradores es cada vez más relevante y significativo la misión y el propósito que persiguen las empresas. Las organizaciones que invierten en iniciativas de sostenibilidad tienden a crear un compromiso entre los colaboradores al enfocarse en temas de relevancia, ya que generan un sentimiento de orgullo al ser parte de un esfuerzo mayor que implica trascendencia lo que se traduce en mayor lealtad y permanencia y, por lo tanto, en menor rotación y mejor posicionamiento como marca empleadora.</p>
+        <p>Las cifras que maneja HBR en este sentido son relevantes: un mayor desempeño en responsabilidad corporativa puede reducir la rotación hasta en un 50% y las tasas de abandono en un 3.5%, lo que implica una disminución en los costos por reemplazo de hasta 200% del salario anual de un colaborador por cada puesto retenido. Estos elementos impactan a su vez en la ventaja competitiva de la empresa.</p>
+        <p>Por donde lo veamos, es momento de orientar a nuestras organizaciones hacia la sostenibilidad y posicionarla como un imperativo estratégico.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/gestion-del-cambio-el-reto-de-administrar-las-renovaciones"><span class="meta">← Artículo anterior</span><h3>Gestión del cambio: El reto de administrar las renovaciones</h3></a>
+        <a class="card pub next" href="#/publicaciones/construir-a-partir-del-conflicto"><span class="meta">Artículo siguiente →</span><h3>Construir a partir del conflicto</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-sostenibilidad-y-talento-en-las-empresas">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-sostenibilidad-y-talento-en-las-empresas">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/gestion-del-cambio-el-reto-de-administrar-las-renovaciones" data-title="Gestión del cambio: El reto de administrar las renovaciones | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Gestión del cambio: El reto de administrar las renovaciones</h1>
+      <p class="article-meta"><time datetime="2022-08-18">18 de agosto de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Continuamente las empresas se enfrentan a una necesidad de renovación para adaptarse al entorno económico, político, social, al mercado y a las necesidades de sus clientes. La gestión del cambio permite administrar el cambio de forma que las personas, sistemas, estructuras y procesos de una organización puedan hacer una transición adecuada hacia el nuevo <em>status quo</em> que se pretende alcanzar; teniendo como objetivo fundamental cambiar la forma en que se hacen las cosas.</p>
+        <p>Para lograr un cambio a nivel de toda la empresa, se requiere que cada uno de sus colaboradores trabajen en este sentido, a través del cambio individual es que lograremos el cambio en la organización.</p>
+        <p>Ya que nuestros comportamientos están determinados por la forma en que pensamos, si deseamos cambiar un resultado es necesario romper con nuestros hábitos de pensamiento, paro lo cual es necesario hacer consciente lo inconsciente.</p>
+        <p>Una vez que identificamos qué hábito de pensamiento tenemos, cómo nos lleva a comportarnos y qué resultados nos trae, entonces podremos sustituir ese hábito de pensamiento por pensamientos nuevos, más adaptativos, que nos lleven a tener comportamientos distintos, con resultados más positivos.</p>
+        <p>La gestión del cambio va de la mano con procesos de mejora continua ya que el cambio es una constante que requiere correcciones y ajustes. Las empresas, al igual que las personas, debemos ser capaces de hacer una introspección, cuestionar nuestras formas de trabajar, nuestras estrategias y volver a replantear nuestras decisiones sobre cómo vamos a participar y a competir en el mercado, siempre con una orientación a la generación de impacto.</p>
+        <p>Siempre que se quiera llevar a cabo un cambio o introducir una nueva manera de hacer las cosas, es importante que tomes en cuenta los siguientes elementos:</p>
+        <ul>
+          <li>Detalla la justificación del cambio: por qué es importante, qué se espera obtener mediante este cambio. Las personas nos desempeñamos mejor cuando entendemos el impacto de lo que hacemos.</li>
+          <li>Crea una hoja de ruta para no perderte ni desviarte del objetivo final: define cuál será el camino a seguir, menciona qué hitos se deberán ir cumpliendo.</li>
+          <li>Prepara un calendario con fechas específicas para todo el proceso del cambio, a fin de cumplir en tiempo y forma; dale claridad a las personas sobre los periodos en que se deben cumplir.</li>
+          <li>Define cuáles son los tramos de control completos para que cada persona pueda saber qué es lo que se espera de ella y pueda hacerse responsable de los resultados. Lo anterior es muy importante, a pesar de que la responsabilidad directa del cambio sea de la dirección.</li>
+          <li>Alinea a todas las personas de la organización hacia el nuevo cambio, permite que cada quién tome consciencia sobre cómo contribuye para este cambio desde su trinchera.</li>
+          <li>Mantén comunicación clara y constante de todo el proceso.</li>
+          <li>Acompaña en todo momento, mantente cercano, asequible y disponible para resolver cualquier duda o inquietud durante el proceso de transición.</li>
+        </ul>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/los-equipos-de-trabajo-el-soporte-de-las-organizaciones"><span class="meta">← Artículo anterior</span><h3>Los equipos de trabajo, el soporte de las organizaciones</h3></a>
+        <a class="card pub next" href="#/publicaciones/sostenibilidad-y-talento-en-las-empresas"><span class="meta">Artículo siguiente →</span><h3>Sostenibilidad y talento en las empresas</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-gestion-del-cambio-el-reto-de-administrar-las-renovaciones">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-gestion-del-cambio-el-reto-de-administrar-las-renovaciones">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/los-equipos-de-trabajo-el-soporte-de-las-organizaciones" data-title="Los equipos de trabajo, el soporte de las organizaciones | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Los equipos de trabajo, el soporte de las organizaciones</h1>
+      <p class="article-meta"><time datetime="2022-08-11">11 de agosto de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Las metas y objetivos que se establecen en una organización difícilmente pueden ser alcanzados por una sola persona. El trabajo en equipo tiene un impacto fundamental en el resultado de la empresa; del esfuerzo grupal depende la solución de problemas, la entrega de servicios y el desarrollo de productos.</p>
+        <p>Esto es particularmente importante conforme los proyectos se van volviendo más complejos y requieren de un grupo de personas que comparten una misma visión, con habilidades y herramientas que se complementan y colaborando alrededor de un propósito común. Cuando los miembros del equipo están motivados para alcanzar una misma meta, comparten información de manera abierta y efectiva y operan basados en la confianza y en el respeto mutuo, se pueden alcanzar los objetivos que nos proponemos.</p>
+        <h2></h2>
+        <h2>¿Cómo puedes lograr un equipo que cumpla con estas características?</h2>
+        <p><strong>1. Establece la visión del equipo y el alcance del proyecto,</strong> esto implica tener claridad sobre el problema u oportunidad que se busca solventar, comprender por qué es importante para la organización y establecer hasta qué punto se plantea llegar. Una visión clara inspira compromiso y amalgama al grupo, aún durante los periodos de tensión y desacuerdo.</p>
+        <p><strong>2. Identifica las herramientas que necesitas. </strong>Pregúntate, ¿qué habilidades técnicas requiere tu equipo?, ¿qué mezcla de perfiles y personalidades puede fomentar la generación de nuevas ideas? Busca información sobre proyectos similares, ¿qué habilidades realmente ayudaron más y qué hizo falta? Recuerda tomar en cuenta tanto habilidades técnicas como interpersonales.</p>
+        <p><strong>3. Integra a las personas más adecuadas.</strong> Es importante identificar quién está disponible, si tiene la experiencia necesaria y cómo va a impactar el proyecto en su desarrollo personal. Aun cuando tengas la autoridad para asignar a una persona a cierto equipo, es importante hacerlo como si fuera parte de un proceso de reclutamiento; es decir, preguntando si pueden y quieren incorporarse al equipo. Es fundamental compartir los beneficios de integrarse al equipo, a nivel personal y organizacional, y por qué consideras que son las personas adecuadas para agregar valor.</p>
+        <p>A lo largo de todo el proceso de conformación del equipo no hay que perder de vista que la diversidad aportará mayor riqueza en términos de experiencias, tanto de vida como profesionales, estilos de pensamiento distintos y personalidades y habilidades diferentes. La integración de personas con las cuales no se ha trabajado antes, puede ayudar en este sentido.</p>
+        <p>Asimismo, da un tiempo específico para definir de manera conjunta los puntos básicos. Aprovecha la reunión inicial para responder tres preguntas básicas: ¿qué? ¿quién? y ¿cómo? De esta manera se podrá generar una identidad propia y pasar de operar como grupo a operar como equipo, sacando lo mejor de las diferencias y colaborando en conjunto para ser el soporte que tu organización necesita.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/hacia-una-operacion-sostenible"><span class="meta">← Artículo anterior</span><h3>Hacia una operación sostenible</h3></a>
+        <a class="card pub next" href="#/publicaciones/gestion-del-cambio-el-reto-de-administrar-las-renovaciones"><span class="meta">Artículo siguiente →</span><h3>Gestión del cambio: El reto de administrar las renovaciones</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-los-equipos-de-trabajo-el-soporte-de-las-organizaciones">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-los-equipos-de-trabajo-el-soporte-de-las-organizaciones">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/hacia-una-operacion-sostenible" data-title="Hacia una operación sostenible | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Hacia una operación sostenible</h1>
+      <p class="article-meta"><time datetime="2022-07-24">24 de julio de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>El compromiso de sostenibilidad en las empresas se debe adoptar desde un nivel estratégico y a partir de éste, aterrizarlo a todas las esferas: Operación, organización y cultura. Solo así podremos obtener resultados tangibles, lo que significa un gran reto.</p>
+        <p>Las empresas generan impacto a lo largo de todos sus procesos: desde la elección de los recursos que se utilizan para la elaboración o prestación de su producto o servicio, hasta la manera de comercializarlos y el impacto que éstos tienen en términos de reciclabilidad, perdurabilidad o fugacidad. Esto implica, entre otras cosas, identificar y medir la huella de carbono de la organización; es decir, la totalidad de gases de efecto invernadero (GEI) emitidos como consecuencia de su actividad económica.</p>
+        <p>De acuerdo con el Greenhouse Gas Protocol, la emisión de gases efecto invernadero se clasifica en función de su alcance. El primer grupo lo constituyen las emisiones GEI que son producto de fuentes controladas por la organización (quema de combustibles en calderas, hornos o vehículos, etc.). El segundo grupo lo conforman las emisiones indirectas asociadas a la compra de electricidad, vapor, calor o enfriamiento. El tercer grupo incluye cualquier otra emisión indirecta que ocurra a lo largo de la cadena de valor (insumos, bienes de capital, trasportación y distribución de productos, viajes de negocios, basura y desperdicios, entre otros).</p>
+        <p>En cada organización, la gestión eficaz y comprometida de la estrategia sostenible implica injerencia en toda la cadena de valor y, por tanto, logrará un efecto progresivo en la preservación ecológica de todo su entorno.</p>
+        <p>Nestlé aplica acciones concretas en su operación en la planta de Veracruz, cuenta con una caldera de biomasa que genera el 70% del vapor que consume, utilizando bagazo de café como combustible. Unilever se ha comprometido a producir y empaquetar artículos de limpieza y lavandería libres de combustibles fósiles, así como a diseñar una red de abastecimiento sostenible; Mondelez, en su unidad de negocio en México funciona en su totalidad con energía renovable.</p>
+        <p>Cada vez es mayor el número de empresas que se comprometen públicamente con metas específicas en términos de emisión de gases efecto invernadero, con un alcance que va más allá de sus propias organizaciones y que abarca a toda la cadena de valor. Para lograr el objetivo se requiere innovación, alianzas y el uso de materias primas de origen responsable, e importante disminuir el impacto negativo del consumo energètico.</p>
+        <p> Es a partir de un modelo de negocio basado en una estrategia sostenible que podremos impactar positivamente en nuestro planeta.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/el-reto-del-cambio-climatico-y-su-costo-para-la-industria"><span class="meta">← Artículo anterior</span><h3>El reto del cambio climático y su costo para la industria</h3></a>
+        <a class="card pub next" href="#/publicaciones/los-equipos-de-trabajo-el-soporte-de-las-organizaciones"><span class="meta">Artículo siguiente →</span><h3>Los equipos de trabajo, el soporte de las organizaciones</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-hacia-una-operacion-sostenible">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-hacia-una-operacion-sostenible">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/el-reto-del-cambio-climatico-y-su-costo-para-la-industria" data-title="El reto del cambio climático y su costo para la industria | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">El reto del cambio climático y su costo para la industria</h1>
+      <p class="article-meta"><time datetime="2022-07-14">14 de julio de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>El cambio climático es el reto más importante de la humanidad en los próximos años, sus repercusiones pueden ser catastróficas y de impacto inmediato. Las repercusiones del calentamiento global ya son evidentes.</p>
+        <p>Los Gases de Efecto Invernadero (GEI) forman una capa que envuelve a la tierra, atrapando el calor y ocasionando que la temperatura del planeta aumente; esto ha cambiado los patrones del clima y afectado el equilibrio de los ecosistemas.</p>
+        <p>Es necesario frenar el calentamiento global, pero ¿cuál será el costo económico y cuáles serán las implicaciones para los países y las industrias? ¿Cuánto le va a costar a tu empresa su energía limpia y cumplir con la reducción de Gases de Efecto Invernadero?</p>
+        <p>Si el cambio se implementa a través de políticas públicas que no consideren minimizar los costos, para algunas industrias y empresas puede representar pérdidas irreparables. El costo para las empresas, los gobiernos locales y la sociedad puede ser muy alto, por lo que se vuelve crítico establecer mesas de diálogo con expertos para establecer mejores prácticas y coadyuvar de manera integral a la reducción del calentamiento global. Se requiere tomar acciones concretas que cambien de forma significativa nuestros hábitos, principalmente los vinculados al consumo energético.</p>
+        <p>México ha asumido el reto que implica la atención al cambio climático; sin embargo, no ha desarrollado políticas públicas que ayuden a definir de manera clara los lineamientos que deben seguir la iniciativa privada y los gobiernos, en sectores que son clave para la economía, como son por ejemplo la industria eléctrica y la de transporte.</p>
+        <p>Las políticas públicas pueden hacer una diferencia importante si se diseñan y evalúan correctamente antes de ser implementadas. Esto se puede lograr a través de un mecanismo integral de evaluación de políticas públicas enfocadas en la mitigación de emisiones de gases de efecto invernadero, que permita evaluar su impacto en el patrón de consumo energético, en la economía del país, en el desarrollo y aplicación de nuevas tecnologías y en los hábitos de la sociedad respecto al medio ambiente.</p>
+        <p>IRALTUS ha dado los primeros pasos en la construcción de un Modelo de Optimización Integral de Políticas Públicas Ambientales (MOIPPA) que permite cuantificar el costo del suministro de energía al país y el impacto en la economía considerando diferentes políticas públicas.</p>
+        <p>La aplicación de éste modelo no es sólo para suministro energético, se considera también generación eléctrica y de calor, autotransporte, fermentación entérica de ganado bovino, gestión de estiércol, manufactura de combustibles sólidos y otras industrias de energía, petróleo, producción de cemento y residencial. Estos rubros representan el 70% de las emisiones generadas y 96% de las emisiones netas considerando la captura de gases en la categoría de tierra (bosques, plantíos, etc.)</p>
+        <p>Dentro del alcance establecido se ha planteado el desarrollo y la evaluación de posibles escenarios y sensibilidades, lo que permitirá discernir entre opciones, para tomar la mejor decisión para México.</p>
+        <p>Si nos anticipamos a entender y evaluar el impacto de las políticas públicas, podremos tomar mejores decisiones para el país y para nuestro negocio y disminuir el costo de utilizar energía limpia y cumplir con la reducción de gases de efecto invernadero.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/la-economia-circular-una-ventana-de-oportunidad-para-las-empresas-mexicanas"><span class="meta">← Artículo anterior</span><h3>La economía circular, una ventana de oportunidad para las empresas mexicanas</h3></a>
+        <a class="card pub next" href="#/publicaciones/hacia-una-operacion-sostenible"><span class="meta">Artículo siguiente →</span><h3>Hacia una operación sostenible</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-el-reto-del-cambio-climatico-y-su-costo-para-la-industria">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-el-reto-del-cambio-climatico-y-su-costo-para-la-industria">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/la-economia-circular-una-ventana-de-oportunidad-para-las-empresas-mexicanas" data-title="La economía circular, una ventana de oportunidad para las empresas mexicanas | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">La economía circular, una ventana de oportunidad para las empresas mexicanas</h1>
+      <p class="article-meta"><time datetime="2022-04-19">19 de abril de 2022</time><span>3 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Los efectos del cambio climático, la crisis económica provocada por la pandemia y la creciente escasez de recursos naturales que impacta a nivel mundial, han intensificado las presiones para implementar estrategias basadas en una economía circular que permita el uso eficiente de recursos, con una clara orientación hacia la sostenibilidad.</p>
+        <p>La economía circular tiene como fin reducir el uso de recursos materiales (a través de diseños ecológicos), prolongar la vida útil de lo que se produce (reciclando) y conservar la calidad de los materiales a lo largo de los distintos ciclos de vida (remanufacturando). También facilita la recuperación de materiales y nutrientes que pueden servir como base para otros productos o servicios (valorizando los residuos).</p>
+        <p>Sin embargo, a pesar de todas estas bondades, no todos los países cuentan con las condiciones necesarias para promover una economía de este tipo. Los procesos de reciclaje, remanufactura o valorización de residuos orgánicos para compostas, digestión anaeróbica o insumos en otras industrias requieren, en su mayoría, de inversiones en infraestructura que no son fácilmente realizables.</p>
+        <p>Sin embargo, no todo está perdido. Las exportaciones constituyen una ventana de oportunidad para transitar hacia una economía circular. Dentro de los principales productos de exportación asociados a la economía circular se encuentran los residuos y la chatarra metálica.</p>
+        <p>Actualmente, muchos residuos orgánicos, particularmente los que se obtienen en procesos de extracción de aceites vegetales, pueden adquirir valor como insumo de otros alimentos, de fármacos o de bioplásticos. América Latina y el Caribe, exportan grandes cantidades de residuos que provienen de la extracción de aceite de soja y que son utilizados en la producción de alimentos de animales y peces en el sudeste asiático.</p>
+        <p>La industria forestal y papelera también ha jugado un papel importante en la promoción de la economía circular. Con el desarrollo de una celulosa proveniente de papeles reciclados, se han podido diversificar las exportaciones de papel y disminuir la deforestación; lo que ha generado importantes ahorros en materia prima, energía y agua, y su posicionamiento como una industria más eficiente y respetuosa del medio ambiente.</p>
+        <p>La necesidad de incentivar mejores prácticas ha promovido la implementación de políticas que facilitan el uso sostenible y eficiente de recursos naturales y materiales, como son, por ejemplo: el registro de proveedores circulares, la promoción de inversión o financiamiento internacional para emprendimientos circulares, las compras públicas sostenibles (compras que incluyen criterios de circularidad en las condiciones de producción) o los incentivos económicos a quienes valoricen residuos orgánicos.</p>
+        <p>Estados Unidos constituye el principal socio en el comercio de bienes circulares, tanto para México como para otros países de América Latina. Durante 2020 Estados Unidos importó cerca de veinte millones de dólares en bienes asociados a la economía circular (CEPAL, 2021). La mayoría de las exportaciones de México a Estados Unidos se ha concentrado en bienes para reciclar, básicamente motores usados de vehículos y chatarra vehicular; aún es muy bajo el volumen de residuos orgánicos que se exportan.</p>
+        <p>Sin duda, lo anterior ofrece una ventana de oportunidad para las empresas mexicanas, particularmente, para la exportación de residuos agrícolas, abriendo una fuente de ingreso adicional para empresas del sector.</p>
+        <p>Un factor fundamental en este sentido es aprovechar los incentivos que otorga Estados Unidos para promover el uso de fuentes renovables en la producción de energía eléctrica (si necesitas más información acércate a nosotros a través de <a href="mailto:contacto@iraltus.com">contacto@iraltus.com</a>).</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/habilidades-requeridas-en-la-nueva-normalidad"><span class="meta">← Artículo anterior</span><h3>Habilidades requeridas en la nueva normalidad</h3></a>
+        <a class="card pub next" href="#/publicaciones/el-reto-del-cambio-climatico-y-su-costo-para-la-industria"><span class="meta">Artículo siguiente →</span><h3>El reto del cambio climático y su costo para la industria</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-la-economia-circular-una-ventana-de-oportunidad-para-las-empresas-mexicanas">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-la-economia-circular-una-ventana-de-oportunidad-para-las-empresas-mexicanas">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/habilidades-requeridas-en-la-nueva-normalidad" data-title="Habilidades requeridas en la nueva normalidad | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">Habilidades requeridas en la nueva normalidad</h1>
+      <p class="article-meta"><time datetime="2022-02-20">20 de febrero de 2022</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Uno de los cambios que se generaron a partir de la pandemia es la necesidad de re-entrenarnos para desarrollar las habilidades y actitudes que demanda un mundo en constante y acelerado cambio.</p>
+        <p>La estrategia de reclutamiento basada en títulos académicos está siendo sustituida por un enfoque integral que demanda experiencia, habilidades y actitudes específicas, las cuales podemos clasificar en cuatro grandes grupos: Cognitivas, Digitales, Interpersonales y de Autoliderazgo.</p>
+        <ul>
+          <li>Las habilidades<strong> cognitivas</strong> implican cuatro elementos básicos: Pensamiento crítico, planeación y formas de trabajo, comunicación y flexibilidad mental.</li>
+          <li>Las habilidades<strong> digitales</strong> hacen referencia a la fluidez y adopción digital, al uso y desarrollo de software y al entendimiento de sistemas digitales.</li>
+          <li>La capacidad para establecer relaciones y lazos afectivos, la capacidad de influir y movilizar a los demás y la efectividad para trabajar en equipo son habilidades<strong> interpersonales</strong>.</li>
+          <li>Finalmente, el talento también deberá desarrollar la capacidad de emprendimiento, el logro de metas y el autoconocimiento y autogestión, habilidades que corresponden a la categoría de <strong>autoliderazgo</strong>.</li>
+        </ul>
+        <p>El reto consiste en incrementar el nivel de profesionalismo en el conjunto de habilidades y actitudes que conforman cada uno de los grupos enlistados.</p>
+        <p><strong>Un desafío para educadores, empleadores y trabajadores</strong></p>
+        <p>Si bien ya existía una brecha en el mercado laboral entre oferta y demanda, en términos de habilidades requeridas por las empresas, a raíz de la pandemia esta brecha se ha profundizado de manera significativa. De acuerdo con Business Talent Group el 87% de las empresas consideran que ya tienen una brecha de habilidades o esperan tenerla en pocos años; a su vez, el 32% de los CEO´s se encuentran extremadamente preocupados porque consideran que la disponibilidad de habilidades que existe en el mercado amenaza sus perspectivas de crecimiento.</p>
+        <p>Los próximos años requerirán de un gran esfuerzo de re-entrenamiento para hacer la transición de tareas rutinarias que requieren de habilidades cognitivas básicas hacia trabajos que demandan un mayor uso de tecnología y de habilidades sociales y emocionales.</p>
+        <p><strong>La oportunidad de reinventarnos</strong></p>
+        <p>La nueva normalidad exige una reconfiguración hacia una fuerza laboral más comprometida y con las habilidades y actitudes que permitan alcanzar las metas de crecimiento. El reto es enorme, sin embargo, la crisis generada por COVID-19 nos ha demostrado que, tanto las empresas como los colaboradores, tenemos una capacidad de adaptación mucho mayor a la que podríamos haber imaginado.</p>
+        <p>Esta es la oportunidad para replantearnos y prepararnos para destacar y trascender como individuos, no solo en el mercado laboral.</p>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub" href="#/publicaciones/el-primer-paso-en-la-mejora-continua-de-procesos"><span class="meta">← Artículo anterior</span><h3>El primer paso en la mejora continua de procesos</h3></a>
+        <a class="card pub next" href="#/publicaciones/la-economia-circular-una-ventana-de-oportunidad-para-las-empresas-mexicanas"><span class="meta">Artículo siguiente →</span><h3>La economía circular, una ventana de oportunidad para las empresas mexicanas</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-habilidades-requeridas-en-la-nueva-normalidad">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-habilidades-requeridas-en-la-nueva-normalidad">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</div>
+
+<div data-page="/publicaciones/el-primer-paso-en-la-mejora-continua-de-procesos" data-title="El primer paso en la mejora continua de procesos | IRALTUS" hidden>
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="#/publicaciones">← Publicaciones</a>
+      <h1 class="h-1 article-title">El primer paso en la mejora continua de procesos</h1>
+      <p class="article-meta"><time datetime="2021-05-18">18 de mayo de 2021</time><span>2 min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+        <p>Las empresas buscan constantemente la manera de obtener mejores resultados. Analizar, revisar y adecuar nos permite minimizar errores y ejecutar de tal manera que se logren los resultados deseados.</p>
+        <p>La mejora es un ciclo permanente que parte de conocer en qué punto nos encontramos, solo así podremos elaborar un plan, ejecutarlo y, al verificarlo, poder corregir posibles desviaciones. Esto solo se puede lograr si se tiene total claridad sobre los procesos que se llevan a cabo en la empresa, de aquí que, el primer paso en la mejora continua consiste en volver tangible lo intangible.</p>
+        <p>Los procesos son importantes para el éxito de las organizaciones, sin ellos podemos cometer errores, perder clientes e incurrir en sobrecostos, incluso exponernos innecesariamente a riesgos por no cumplir con determinadas regulaciones. Sin embargo, la mayoría de los procesos de negocio son invisibles y por lo tanto se dificulta identificar cuando las cosas van mal.</p>
+        <p>Darles visibilidad permite decidir hacia dónde queremos ir y cómo mejorar. Para lograrlo, es necesario analizar tres niveles distintos, lo que implica ir de arriba hacia abajo, de lo estratégico a lo operativo:</p>
+        <ul>
+          <li><strong>Primer nivel:</strong> Análisis de la perspectiva contextual, la representación del <strong>entorno</strong> en el que la empresa lleva a cabo sus operaciones y sus principales interacciones: clientes, proveedores, competidores y el entorno regulador en el que se desenvuelve.</li>
+          <li><strong>Segundo nivel:</strong> Representación de lo que pasa adentro de la empresa, los principales procesos estratégicos, sustantivos y de soporte. Implica esquematizar el <strong>qué se hace</strong> dentro de la organización, cuáles son los procesos que definen la razón de ser de nuestra empresa (<em>core business</em>), es aquí donde empezamos a identificar las prioridades para destinar recursos a la mejora.</li>
+          <li><strong>Tercer nivel:</strong> El <strong>quién</strong> y el <strong>cómo</strong>. Definición de responsables con sus funciones, se incorporan sistemas, documentos, decisiones, herramientas, y todo lo relacionado a la forma de llevarlo a cabo. De aquí se derivan descripciones de puestos y todos los recursos necesarios para llevar a cabo el proceso.</li>
+        </ul>
+        <p>Una vez que hemos modelado los procesos es bueno hacerlos visibles y compartirlos con toda la organización, de esta manera cada uno de los colaboradores, en todos los niveles, tendrá clara la forma de operar de la empresa y podrá identificar oportunidades de mejora.</p>
+        <p>El modelado de procesos nos permite centrar nuestra atención en siete puntos básicos:</p>
+        <ol>
+          <li>Actividades obsoletas. ¿Hay pasos que pudiéramos eliminar del proceso?</li>
+          <li>Ahorro de tiempo. ¿Hay acciones que realizamos secuencialmente y que podrían llevarse a cabo en paralelo?</li>
+          <li>Comunicación efectiva. ¿Es eficiente la transmisión de información? ¿genera retrasos en la ejecución?</li>
+          <li>Flujo de información. ¿Hay vacíos en el proceso?</li>
+          <li>Acopio de información. ¿Es necesario interrumpir el proceso en espera de que la información sea recibida?</li>
+          <li>Cuellos de botella. ¿Existen actividades o fases que generan retrasos o tiempos muertos?</li>
+          <li>Duplicidad. ¿Estamos repitiendo pasos en el proceso?</li>
+        </ol>
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        <a class="card pub next" href="#/publicaciones/habilidades-requeridas-en-la-nueva-normalidad"><span class="meta">Artículo siguiente →</span><h3>Habilidades requeridas en la nueva normalidad</h3></a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-el-primer-paso-en-la-mejora-continua-de-procesos">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-el-primer-paso-en-la-mejora-continua-de-procesos">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="#/contacto">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
     </div>
   </section>
 </div>
@@ -998,7 +1898,8 @@ main:focus{outline:none}
     document.title=page.dataset.title;
     // Nav activo
     document.querySelectorAll('[data-nav]').forEach(function(a){
-      if(a.dataset.nav===page.dataset.page) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      var p=page.dataset.page, n=a.dataset.nav;
+      if(p===n || (n!=='/' && p.indexOf(n+'/')===0)) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
     // Preseleccionar tema en contacto desde la URL
     if(page.dataset.page==='/contacto'){
