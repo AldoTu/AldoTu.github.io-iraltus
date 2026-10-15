@@ -282,6 +282,8 @@ a.pub:hover{border-color:var(--line-strong);box-shadow:var(--shadow)}
 .prose .footnotes{list-style:none;padding:20px 0 0;margin-top:48px;border-top:1px solid var(--line);display:grid;gap:8px;font-size:14px;line-height:1.5;color:var(--muted)}
 .footnotes li + li{margin-top:0}
 .footnotes .n{display:inline-block;min-width:22px;color:var(--bronze);font-weight:600;font-variant-numeric:tabular-nums}
+.legal-col{max-width:68ch;margin-inline:auto;font-size:18px}
+.legal p,.legal li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 .article-nav{display:grid;grid-template-columns:repeat(2, 1fr);gap:20px;max-width:68ch;margin-top:clamp(48px, 6vw, 72px)}
 .article-nav .pub h3{font-size:21px}
 .article-nav .next{grid-column:2;text-align:right}
@@ -1840,15 +1842,17 @@ main:focus{outline:none}
 <div data-page="/aviso-de-privacidad" data-title="Aviso de Privacidad Integral | IRALTUS" hidden>
   <section class="page-hero">
     <div class="wrap">
-      <span class="eyebrow">IRALTUS, S.C.</span>
-      <h1 class="h-1 article-title">Aviso de Privacidad Integral</h1>
-      <p class="article-meta"><span>Última actualización: <time datetime="2026-10-14">14 de octubre de 2026</time></span></p>
+      <div class="legal-col">
+        <span class="eyebrow">IRALTUS, S.C.</span>
+        <h1 class="h-1 article-title">Aviso de Privacidad Integral</h1>
+        <p class="article-meta"><span>Última actualización: <time datetime="2026-10-14">14 de octubre de 2026</time></span></p>
+      </div>
     </div>
   </section>
 
   <section class="block" aria-label="Aviso de privacidad">
     <div class="wrap">
-      <article class="prose">
+      <article class="prose legal-col legal">
         <p>En cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (la “Ley”), IRALTUS, S.C. pone a su disposición el presente Aviso de Privacidad, con el fin de informarle cómo tratamos sus datos personales y cómo puede ejercer los derechos que la Ley le reconoce.</p>
 
         <h2>1. Identidad y domicilio del responsable</h2>
