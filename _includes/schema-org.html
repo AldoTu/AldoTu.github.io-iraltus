@@ -1,0 +1,23 @@
+{%- assign org = site.data.org -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": {{ org.name | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "email": {{ org.email | jsonify }},
+  "foundingDate": {{ org.founding_date | jsonify }},
+  "areaServed": "MX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ org.address.street | append: ", Col. " | append: org.address.colonia | jsonify }},
+    "addressLocality": {{ org.address.locality | jsonify }},
+    "addressRegion": {{ org.address.region | jsonify }},
+    "postalCode": {{ org.address.postal_code | jsonify }},
+    "addressCountry": {{ org.address.country | jsonify }}
+  },
+  "sameAs": {{ org.social | map: "url" | jsonify }},
+  "founder": [{% for p in org.founders %}{"@type": "Person", "name": {{ p.name | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+  "employee": [{% for p in org.employees %}{"@type": "Person", "name": {{ p.name | jsonify }}, "jobTitle": {{ p.job_title | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+}
+</script>

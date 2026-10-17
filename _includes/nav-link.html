@@ -1,0 +1,2 @@
+{%- assign nav_prefix = page.url | slice: 0, include.item.url.size -%}
+<a href="{{ include.item.url | relative_url }}"{% if page.url == include.item.url or include.item.url != '/' and nav_prefix == include.item.url %} aria-current="page"{% endif %}>{{ include.item.title }}{% if include.item.desc %}<small>{{ include.item.desc }}</small>{% endif %}</a>

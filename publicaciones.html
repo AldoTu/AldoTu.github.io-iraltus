@@ -1,0 +1,49 @@
+---
+title: "Publicaciones"
+description: "Columnas, webinars y eventos sobre estrategia, organización, sostenibilidad y gobierno corporativo."
+permalink: /publicaciones/
+---
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Publicaciones</span>
+      <h1 class="h-1">Ideas para empresas que quieren gobernarse como grandes</h1>
+      <p class="lead">Columnas, webinars y eventos sobre estrategia, organización, sostenibilidad y gobierno corporativo.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-blog">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h-2" id="h-blog">Blog</h2>
+        <p class="lead">Columnas sobre estrategia, organización, sostenibilidad y energía, publicadas en colaboración con el periódico <i>La Razón</i>.</p>
+      </div>
+      <div class="pubs">
+        {%- for post in site.posts %}
+        {% include pub-card.html post=post %}
+        {%- endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-articulos" hidden>
+    <div class="wrap">
+      <h2 class="h-2" id="h-articulos" style="margin-bottom:28px">Artículos</h2>
+      <div class="pubs">
+        <a class="card pub" href="https://en.iraltus.com/uncasodeexito"><span class="meta">Artículo</span><h3>Un caso de éxito</h3><p>Cómo una transformación integral se traduce en resultados sostenidos.</p><span class="more">Leer artículo →</span></a>
+        <a class="card pub" href="https://en.iraltus.com/trascendencia-empresarial"><span class="meta">Artículo</span><h3>Trascendencia empresarial</h3><p>Qué hace que una empresa perdure más allá de su fundador.</p><span class="more">Leer artículo →</span></a>
+        <article class="card pub soon"><span class="meta">Próximamente</span><h3>Siete señales de que tu empresa ya necesita un General Counsel</h3><span class="more">En preparación…</span></article>
+        <article class="card pub soon"><span class="meta">Próximamente</span><h3>Un Consejo que existe no es un Consejo que gobierna</h3><span class="more">En preparación…</span></article>
+        <article class="card pub soon"><span class="meta">Próximamente</span><h3>Lo que un fondo revisa primero en una empresa familiar</h3><span class="more">En preparación…</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block paper" aria-labelledby="h-eventos">
+    <div class="wrap two-col">
+      <div>
+        <h2 class="h-2" id="h-eventos">Webinars y eventos</h2>
+        <p class="lead" style="margin-top:14px">Por ahora no hay sesiones programadas. Escríbenos y te avisamos de la siguiente.</p>
+      </div>
+      <div style="align-self:end"><a class="btn btn-ghost" href="/contacto/">Quiero recibir avisos</a></div>
+    </div>
+  </section>

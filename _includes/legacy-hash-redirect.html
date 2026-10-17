@@ -1,0 +1,20 @@
+<script>
+(function(){
+  var anchors={
+    'lo-que-hacemos':'/',
+    'ecoo':'/desarrollo-de-negocio/','estudios-de-mercado':'/desarrollo-de-negocio/','plan-estrategico':'/desarrollo-de-negocio/',
+    'diagnostico':'/direccion-juridica/','secretaria':'/direccion-juridica/',
+    'carlos-murrieta':'/equipo/','laura-montes-bracchini':'/equipo/'
+  };
+  function redirect(){
+    var h=location.hash;
+    if(h.indexOf('#/')!==0) return;
+    var path=h.slice(2), query='', q=path.indexOf('?');
+    if(q>-1){ query=path.slice(q); path=path.slice(0,q); }
+    path=path.replace(/\/+$/,'');
+    location.replace(anchors[path] ? anchors[path]+'#'+path : '/'+(path?path+'/':'')+query);
+  }
+  redirect();
+  window.addEventListener('hashchange',redirect);
+})();
+</script>

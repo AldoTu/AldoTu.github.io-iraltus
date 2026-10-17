@@ -1,0 +1,57 @@
+---
+title: "Contacto"
+description: "Cuéntanos qué te gustaría resolver. Un socio te responde en un máximo de dos días hábiles."
+permalink: /contacto/
+---
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Contacto</span>
+      <h1 class="h-1">Agenda una conversación</h1>
+      <p class="lead">Cuéntanos qué te gustaría resolver. Un socio te responde en un máximo de dos días hábiles.</p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Formulario de contacto">
+    <div class="wrap contact-grid">
+      <form class="contact" id="contact-form" novalidate action="https://formsubmit.co/contacto@iraltus.com" method="post">
+        <div class="hp" aria-hidden="true"><label for="f-honey">No llenar</label><input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="row-2">
+          <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="María González…" required aria-describedby="e-nombre"><span class="err" id="e-nombre" aria-live="polite"></span></div>
+          <div class="field"><label for="f-cargo">Cargo</label><input id="f-cargo" name="cargo" type="text" autocomplete="organization-title" placeholder="Directora general…" required aria-describedby="e-cargo"><span class="err" id="e-cargo" aria-live="polite"></span></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization" placeholder="Grupo Ejemplo…" required aria-describedby="e-empresa"><span class="err" id="e-empresa" aria-live="polite"></span></div>
+          <div class="field"><label for="f-correo">Correo</label><input id="f-correo" name="correo" type="email" inputmode="email" autocomplete="email" spellcheck="false" placeholder="maria@empresa.com" required aria-describedby="e-correo"><span class="err" id="e-correo" aria-live="polite"></span></div>
+        </div>
+        <fieldset class="field" aria-describedby="e-tema">
+          <legend>¿Qué te gustaría resolver?</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="tema" value="juridico"><span>Dirección jurídica y Consejo</span></label>
+            <label class="choice"><input type="radio" name="tema" value="estrategia"><span>Estrategia y estudios de mercado</span></label>
+            <label class="choice"><input type="radio" name="tema" value="institucionalizacion"><span>Institucionalización</span></label>
+          </div>
+          <span class="err" id="e-tema" aria-live="polite"></span>
+        </fieldset>
+        <div class="field"><label for="f-mensaje">Mensaje <span class="opt">(opcional)</span></label><textarea id="f-mensaje" name="mensaje" placeholder="Contexto breve de tu empresa y del tema…"></textarea></div>
+        <div class="privacy-note">
+          <p>IRALTUS, S.C., con domicilio en Avenida Ejército Nacional 843-B, piso 5, interior 5070, colonia Granada, código postal 11520, alcaldía Miguel Hidalgo, Ciudad de México, es responsable del tratamiento de los datos personales que nos proporcione en este formulario: nombre, cargo, empresa, correo electrónico, teléfono y el contenido de su mensaje.</p>
+          <p>Utilizaremos sus datos para atender su solicitud y, en su caso, presentarle una propuesta de servicios (finalidades primarias). Adicionalmente, y sólo si usted no se opone, los utilizaremos para enviarle publicaciones, invitaciones a eventos e información sobre nuestros servicios (finalidad secundaria).</p>
+          <p>Puede negarse a la finalidad secundaria marcando la casilla siguiente o, en cualquier momento, escribiendo a <a href="mailto:contacto@iraltus.com?subject=Finalidades%20secundarias">contacto@iraltus.com</a> con el asunto “Finalidades secundarias”. También puede limitar el uso de sus datos solicitando su inscripción en nuestro listado de exclusión.</p>
+          <label class="optout"><input type="checkbox" name="no_publicidad" value="si"><span>No deseo recibir publicaciones, invitaciones ni información sobre los servicios de IRALTUS.</span></label>
+          <p>Consulte nuestro Aviso de Privacidad Integral en <a href="/aviso-de-privacidad/">www.iraltus.com/aviso-de-privacidad</a>.</p>
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit" id="f-submit"><span class="spinner" aria-hidden="true"></span><span>Enviar mensaje</span></button>
+        </div>
+        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+      </form>
+
+      <aside class="contact-aside on-green" aria-label="Datos de contacto">
+        <dl style="display:grid;gap:22px;margin:0">
+          <div><dt>Correo</dt><dd><a href="mailto:{{ site.data.org.email }}">{{ site.data.org.email }}</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/company/iraltus" rel="noopener" target="_blank">linkedin.com/company/iraltus</a></dd></div>
+          <div><dt>Oficina</dt><dd>{% include address.html %}</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>

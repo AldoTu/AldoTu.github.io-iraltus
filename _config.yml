@@ -1,0 +1,48 @@
+title: IRALTUS
+tagline: Estrategia, Dirección Jurídica y Gobierno Corporativo · Ciudad de México
+description: Dirección jurídica, Secretaría del Consejo y estrategia para empresas familiares y privadas que ya son grandes. Del lado de quien decide.
+url: https://iraltus.com
+baseurl: ""
+lang: es-MX
+locale: es_MX
+timezone: America/Mexico_City
+logo: /img/hero-ir.png
+
+twitter:
+  username: iraltus
+  card: summary_large_image
+
+social:
+  name: IRALTUS
+  links:
+    - https://www.linkedin.com/company/iraltus
+    - https://www.facebook.com/iraltus
+    - https://twitter.com/iraltus
+    - https://www.instagram.com/iraltus_sc/
+
+permalink: /publicaciones/:title/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      image:
+        path: /img/hero-ir.png
+        width: 864
+        height: 864
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md

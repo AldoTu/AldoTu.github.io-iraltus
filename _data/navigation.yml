@@ -1,0 +1,24 @@
+- title: Inicio
+  url: /
+- title: Qué hacemos
+  menu_id: menu-que
+  children:
+    - title: Dirección Jurídica y Secretaría del Consejo
+      url: /direccion-juridica/
+      desc: Función jurídica, despachos y gobierno del Consejo
+      footer: true
+    - title: Desarrollo de Negocio
+      url: /desarrollo-de-negocio/
+      desc: Estrategia, estudios de mercado y modelo ECOO
+      footer: true
+- title: Programa de Institucionalización
+  url: /programa/
+  footer: true
+- title: Equipo
+  url: /equipo/
+  footer: true
+- title: Publicaciones
+  url: /publicaciones/
+  footer: true
+- title: Contacto
+  url: /contacto/

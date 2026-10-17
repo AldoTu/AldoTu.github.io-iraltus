@@ -1,0 +1,35 @@
+---
+layout: default
+---
+  <section class="page-hero">
+    <div class="wrap">
+      <a class="eyebrow back" href="{{ '/publicaciones/' | relative_url }}">← Publicaciones</a>
+      <h1 class="h-1 article-title">{{ page.title }}</h1>
+      <p class="article-meta">{% include date-es.html date=page.date %}<span>{{ page.reading_time }} min de lectura</span><span>Colaboración con <i>La Razón</i></span></p>
+    </div>
+  </section>
+
+  <section class="block" aria-label="Artículo">
+    <div class="wrap">
+      <article class="prose">
+{{ content }}
+      </article>
+      <nav class="article-nav" aria-label="Más artículos">
+        {%- if page.previous %}
+        <a class="card pub" href="{{ page.previous.url | relative_url }}"><span class="meta">← Artículo anterior</span><h3>{{ page.previous.title }}</h3></a>
+        {%- endif %}
+        {%- if page.next %}
+        <a class="card pub next" href="{{ page.next.url | relative_url }}"><span class="meta">Artículo siguiente →</span><h3>{{ page.next.title }}</h3></a>
+        {%- endif %}
+      </nav>
+    </div>
+  </section>
+
+  <section class="close-band paper" aria-labelledby="h-cierre-{{ page.slug }}">
+    <div class="wrap">
+      <span class="eyebrow">Conversemos</span>
+      <h2 class="h-1" id="h-cierre-{{ page.slug }}">¿Este tema está sobre la mesa en tu empresa?</h2>
+      <p class="lead">Platiquemos cómo aterrizarlo en tu estrategia, tu operación y tu gobierno.</p>
+      <a class="btn btn-primary" href="{{ '/contacto/' | relative_url }}">Agenda una conversación <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </section>

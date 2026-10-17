@@ -1,0 +1,44 @@
+{%- assign org = site.data.org -%}
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="IRALTUS, ir al inicio" translate="no"><svg aria-hidden="true" style="outline:1px solid rgba(246,242,234,.25)"><use href="#ir-mark"/></svg><span class="wordmark">IRALTUS</span></a>
+        <p>Estrategia, dirección jurídica y gobierno corporativo para empresas familiares y privadas. Del lado de quien decide.</p>
+        <div class="social">
+          {%- for s in org.social %}
+          <a href="{{ s.url }}" aria-label="IRALTUS en {{ s.name }}" rel="noopener" target="_blank">{{ s.icon }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+      <div>
+        <h2>Sitio</h2>
+        <ul>
+          {%- for item in site.data.navigation %}
+          {%- if item.children %}
+          {%- for child in item.children %}
+          {%- if child.footer %}
+          <li><a href="{{ child.url | relative_url }}">{{ child.title }}</a></li>
+          {%- endif %}
+          {%- endfor %}
+          {%- elsif item.footer %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+          {%- endif %}
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <h2>Contacto</h2>
+        <ul>
+          <li><a href="mailto:{{ org.email }}">{{ org.email }}</a></li>
+          <li><a href="{{ org.linkedin.url }}" rel="noopener" target="_blank">{{ org.linkedin.label }}</a></li>
+          <li>{% include address.html %}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© <span class="num" id="year">{{ site.time | date: '%Y' }}</span> <span translate="no">IRALTUS</span>. Ciudad de México.</span>
+      <a href="{{ '/aviso-de-privacidad/' | relative_url }}">Aviso de privacidad</a>
+    </div>
+  </div>
+</footer>
