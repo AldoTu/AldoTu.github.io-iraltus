@@ -67,16 +67,17 @@
     status.textContent=''; delete status.dataset.state;
     var d=new FormData(form), temaTxt=form.querySelector('input[name="tema"]:checked').nextElementSibling.textContent;
     var payload={
+      access_key:d.get('access_key'),
       Nombre:d.get('nombre'), Cargo:d.get('cargo'), Empresa:d.get('empresa'), Correo:d.get('correo'),
       Tema:temaTxt, Mensaje:d.get('mensaje')||'',
       'Finalidad secundaria':d.get('no_publicidad')?'Se opone (no enviar publicaciones ni invitaciones)':'No se opone',
-      _subject:'Contacto web: '+temaTxt+' — '+d.get('empresa'),
-      _replyto:d.get('correo'), _template:'table', _captcha:'false', _honey:d.get('_honey')||''
+      subject:'Contacto web: '+temaTxt+' — '+d.get('empresa'),
+      from_name:'Sitio web IRALTUS', replyto:d.get('correo'), botcheck:d.get('botcheck')||''
     };
     function done(){ btn.removeAttribute('aria-busy'); btn.disabled=false; btn.lastElementChild.textContent='Enviar mensaje'; }
-    fetch('https://formsubmit.co/ajax/contacto@iraltus.com',{
+    fetch('https://api.web3forms.com/submit',{
       method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body:JSON.stringify(payload)
-    }).then(function(r){ return r.json().then(function(j){ if(!r.ok || String(j.success)!=='true'){ console.warn('FormSubmit:',j.message); throw new Error(j.message); } }); })
+    }).then(function(r){ return r.json().then(function(j){ if(!r.ok || String(j.success)!=='true'){ console.warn('Web3Forms:',j.message); throw new Error(j.message); } }); })
       .then(function(){
         done(); form.reset();
         status.textContent='Gracias. Recibimos tu mensaje; un socio te responderá en un máximo de dos días hábiles.';

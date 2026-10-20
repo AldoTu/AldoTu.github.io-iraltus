@@ -13,8 +13,9 @@ permalink: /contacto/
 
   <section class="block" aria-label="Formulario de contacto">
     <div class="wrap contact-grid">
-      <form class="contact" id="contact-form" novalidate action="https://formsubmit.co/contacto@iraltus.com" method="post">
-        <div class="hp" aria-hidden="true"><label for="f-honey">No llenar</label><input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+      <form class="contact" id="contact-form" novalidate action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="00b12b69-c985-4e78-bbba-d87cdd282c3a">
+        <div class="hp" aria-hidden="true"><label for="f-honey">No llenar</label><input id="f-honey" name="botcheck" type="text" tabindex="-1" autocomplete="off"></div>
         <div class="row-2">
           <div class="field"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="María González…" required aria-describedby="e-nombre"><span class="err" id="e-nombre" aria-live="polite"></span></div>
           <div class="field"><label for="f-cargo">Cargo</label><input id="f-cargo" name="cargo" type="text" autocomplete="organization-title" placeholder="Directora general…" required aria-describedby="e-cargo"><span class="err" id="e-cargo" aria-live="polite"></span></div>
