@@ -17,7 +17,6 @@
     "addressCountry": {{ org.address.country | jsonify }}
   },
   "sameAs": {{ org.social | map: "url" | jsonify }},
-  "founder": [{% for p in org.founders %}{"@type": "Person", "name": {{ p.name | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}],
-  "employee": [{% for p in org.employees %}{"@type": "Person", "name": {{ p.name | jsonify }}, "jobTitle": {{ p.job_title | jsonify }}}{% unless forloop.last %}, {% endunless %}{% endfor %}]
+  "founder": [{% for p in org.founders %}{"@type": "Person", "name": {{ p.name | jsonify }}{% if p.job_title %}, "jobTitle": {{ p.job_title | jsonify }}{% endif %}}{% unless forloop.last %}, {% endunless %}{% endfor %}]
 }
 </script>
